@@ -9,6 +9,8 @@ package com;
  *
  * @author ang_2
  */
+import Persistencia.FachadaPersistencia;
+import Persistencia.MedioAlmacenamientoTipo;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -26,6 +28,7 @@ import javax.websocket.server.ServerEndpoint;
 @ServerEndpoint(value = "/chat/{room}", encoders = ChatMessageEncoder.class, decoders = ChatMessageDecoder.class)
 public class ChatEndpoint {
 
+    private static final MedioAlmacenamientoTipo MEDIO = MedioAlmacenamientoTipo.BD;
     private final Logger log = Logger.getLogger(getClass().getName());
     private static Map<String, Session> usuarios = new HashMap<String, Session>();
 
@@ -34,6 +37,7 @@ public class ChatEndpoint {
         log.info("entra");
         session.getUserProperties().put("room", room);
         usuarios.put(session.getPathParameters().get("user"), session);
+
     }
 
     @OnClose
