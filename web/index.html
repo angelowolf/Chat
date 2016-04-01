@@ -74,32 +74,66 @@
         <link rel="shortcut icon" href="./resource/ico/favicon.png">
         <script>
             var wsocket;
-            var serviceLocation = "ws://localhost:8080/Chat/chat/";
-            var $nickName;
+            var serviceLocation = "wss://localhost:8443/Chat/chat";
+            var $nick;
+            var $clave;
             var $message;
             var $chatWindow;
-            var room = '';
+            function mensajeRecibido(evt) {
 
-            function onMessageReceived(evt) {
-                //var msg = eval('(' + evt.data + ')');
-                var msg = JSON.parse(evt.data); // native API
-                var $messageLine = $('<tr><td class="received">' + msg.received
-                        + '</td><td class="user label label-info">' + msg.sender
-                        + '</td><td class="message badge">' + msg.message
-                        + '</td></tr>');
-                $chatWindow.append($messageLine);
+                var mensaje = JSON.parse(evt.data);
+                var tipo = mensaje.tipo;
+                console.log(tipo);
+                if (tipo.toString() === 'LOGIN') {
+                    //error al iniciar sesion....
+                    console.log(mensaje.mensaje);
+                } else if (tipo.toString() === 'MENSAJE') {
+                    //recibi un mensaje....
+                    //var msg = eval('(' + evt.data + ')');
+                    var msg = JSON.parse(evt.data); // native API
+                    $('#nombre').html(msg.envia);
+                    $('#destino').val(msg.envia);
+                    var $messageLine = $('<div class="message badge pull-left">' + msg.mensaje
+                            + '</div>');
+                    $('#response').append($messageLine)
+                } else if (tipo.toString() === 'CONTACTOS') {
+                    //actualizacion de la lista de contactos...
+                    console.log(mensaje.usuarios);
+                    var usuarios = mensaje.usuarios;
+                    $lista_usuario.empty();
+                    for (i = 0; i < usuarios.length; i++) {
+                        var $li = $('<li id="' + usuarios[i] + '" onclick="funcion(this.id)">' + usuarios[i] + '</li>');
+                        $lista_usuario.append($li);
+                    }
+                } else if (tipo.toString() === 'ERROR') {
+                    alert('Hiciste algo que mal :(');
+                } else if (tipo.toString() === "OK") {
+                    $('.chat-wrapper h2').text('Conectado como:' + $nick.val());
+                    $('.chat-signin').hide();
+                    $('#ventana_chat').show();
+                }
             }
-            function sendMessage() {
-                var msg = '{"message":"' + $message.val() + '", "sender":"'
-                        + $nickName.val() + '", "received":""}';
+            function enviarMensaje() {
+                var $messageLine = $('<div class="message badge pull-right">' + $mensaje.val()
+                        + '</div>');
+                $('#response').append($messageLine)
+                var msg = '{"mensaje":"' + $mensaje.val() + '", "envia":"'
+                        + $nick.val() + '", "recibe":"' + $destino.val() + '","tipo":"MENSAJE"}';
                 wsocket.send(msg);
-                $message.val('').focus();
+                $mensaje.val('').focus();
             }
+            function iniciarSesion() {
+                var msg = '{nick:' + $nick.val() + ',clave:' + $clave.val() + ',tipo:LOGIN}';
+                wsocket.send(msg);
+            }
+            function conectarWebSocket() {
 
-            function connectToChatserver() {
-                room = $('#chatroom option:selected').val();
-                wsocket = new WebSocket(serviceLocation + room+'?user=cazador1992');
-                wsocket.onmessage = onMessageReceived;
+                wsocket = new WebSocket(serviceLocation);
+                wsocket.onmessage = mensajeRecibido;
+                wsocket.onopen = function (e) {
+                    console.log('conexion creada');
+                    iniciarSesion();
+                };
             }
 
             function leaveRoom() {
@@ -110,26 +144,26 @@
                 $nickName.focus();
             }
 
+            function funcion(id) {
+                $('#nombre').html(id);
+                $destino.val(id);
+            }
             $(document).ready(function () {
-                $nickName = $('#nickname');
-                $message = $('#message');
-                $chatWindow = $('#response');
-                $('.chat-wrapper').hide();
-                $nickName.focus();
-
-                $('#enterRoom').click(function (evt) {
+                $destino = $('#destino')
+                $nick = $('#nick');
+                $clave = $('#clave');
+                $lista_usuario = $('#lista-usuarios');
+                $('#ventana_chat').hide();
+                $mensaje = $('#mensaje');
+                $nick.focus();
+                $('#iniciarsesion').click(function (evt) {
                     evt.preventDefault();
-                    connectToChatserver();
-                    $('.chat-wrapper h2').text('Chat # ' + $nickName.val() + "@" + room);
-                    $('.chat-signin').hide();
-                    $('.chat-wrapper').show();
-                    $message.focus();
+                    conectarWebSocket();
                 });
-                $('#do-chat').submit(function (evt) {
+                $('#chat').submit(function (evt) {
                     evt.preventDefault();
-                    sendMessage()
+                    enviarMensaje();
                 });
-
                 $('#leave-room').click(function () {
                     leaveRoom();
                 });
@@ -137,41 +171,38 @@
         </script>
     </head>
 
-    <body>
+    <body class="container">
 
         <div class="container chat-signin">
             <form class="form-signin">
-                <h2 class="form-signin-heading">Chat sign in</h2>
-                <label for="nickname">Nickname</label> <input type="text"
-                                                              class="input-block-level" placeholder="Nickname" id="nickname">
-                <div class="btn-group">
-                    <label for="chatroom">Chatroom</label> <select size="1"
-                                                                   id="chatroom">
-                        <option>arduino</option>
-                        <option>java</option>
-                        <option>groovy</option>
-                        <option>scala</option>
-                    </select>
-                </div>
-                <button class="btn btn-large btn-primary" type="submit"
-                        id="enterRoom">Sign in</button>
+                <h2 class="form-signin-heading">Inicio sesion</h2>
+                <label for="nick">Nick</label>
+                <input type="text" class="input-block-level" placeholder="Nick" id="nick">
+                <label for="clave">Clave</label>
+                <input type="password" class="input-block-level" placeholder="Clave" id="clave">
+                <button class="btn btn-large btn-primary" type="submit" id="iniciarsesion">Sign in</button>
             </form>
         </div>
-        <!-- /container -->
+        <!--/container--> 
 
-        <div class="container chat-wrapper">
-            <form id="do-chat">
-                <h2 class="alert alert-success"></h2>
-                <table id="response" class="table table-bordered"></table>
+        <div id="ventana_chat" class="col-md-12">
+            <div class="chat">
+                <div class="wall" id="usuarios-conectados">
+                    <fieldset>
+                        <legend>Usuarios conectados</legend>
+                        <ul id="lista-usuarios">
+
+                        </ul>
+                    </fieldset>
+                </div>
+            </div>
+            <form id="chat">
                 <fieldset>
-                    <legend>Enter your message..</legend>
-                    <div class="controls">
-                        <input type="text" class="input-block-level" placeholder="Your message..." id="message" style="height:60px"/>
-                        <input type="submit" class="btn btn-large btn-block btn-primary"
-                               value="Send message" />
-                        <button class="btn btn-large btn-block" type="button" id="leave-room">Leave
-                            room</button>
-                    </div>
+                    <legend id="hablando">Hablando con:<label id="nombre"></label></legend>
+                    <div id="response" class="wall"></div>
+                    <input type="hidden" id="destino"/>
+                    <input type="text" placeholder="ingrese mensaje.." id="mensaje" class="input-block-level" />
+                    <input type="submit" class="btn btn-large btn-block btn-primary" value="Enviar mensaje" />
                 </fieldset>
             </form>
         </div>
