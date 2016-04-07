@@ -10,37 +10,48 @@ var token;
 
 function mensajeRecibido(evt) {
     var mensaje = JSON.parse(evt.data);
-    var tipo = mensaje.tipo;
-    console.log(tipo);
-    if (tipo.toString() === 'LOGIN') {
-        //error al iniciar sesion....
-        console.log(mensaje.mensaje);
-    } else if (tipo.toString() === 'MENSAJE') {
-        //recibi un mensaje....
-        //var msg = eval('(' + evt.data + ')');
-        var msg = JSON.parse(evt.data); // native API
-        cargarVentanaChatParticular(msg.envia, false);
-        $elchat = $('#chat-' + msg.envia);
-        $lista_usuario.find("#" + msg.envia + ' > .badge').text("nuevo");
-        var $messageLine = $('<br> <div class="message badge pull-left">' + msg.mensaje + '</div>');
-        $elchat.find("div#response").append($messageLine);
-    } else if (tipo.toString() === 'CONTACTOS') {
-        //actualizacion de la lista de contactos...
-        console.log(mensaje.usuarios);
-        var usuarios = mensaje.usuarios;
-        $lista_usuario.empty();
-        for (i = 0; i < usuarios.length; i++) {
-            var $li = $('<li id="' + usuarios[i] + '" onclick="cargarVentanaChatParticular(this.id,true)">' + usuarios[i] + '<span class="badge"></badge></li>');
-            $lista_usuario.append($li);
-        }
-    } else if (tipo.toString() === "OK") {
-        $('#ventana-login').hide();
-        $('#ventana_chat').show();
-        $('#chat-defalut').hide();
-        console.log(mensaje.token);
-        token = mensaje.token;
-    } else if (tipo.toString() === 'ERROR') {
-        alert(mensaje.mensaje);
+    var tipo = mensaje.tipo + "";
+    switch (tipo) {
+        case 'LOGIN':
+            {
+                alert(mensaje.mensaje);
+            }
+            break;
+        case 'OK':
+            {
+                $('#ventana-login').hide();
+                $('#ventana_chat').show();
+                $('#chat-defalut').hide();
+                token = mensaje.token;
+            }
+            break;
+        case 'MENSAJE':
+            {
+                //recibi un mensaje....
+                //var msg = eval('(' + evt.data + ')');
+                var msg = JSON.parse(evt.data); // native API
+                cargarVentanaChatParticular(msg.envia, false);
+                $elchat = $('#chat-' + msg.envia);
+                $lista_usuario.find("#" + msg.envia + ' > .badge').text("nuevo");
+                var $messageLine = $('<br> <div class="message badge pull-left">' + msg.mensaje + '</div>');
+                $elchat.find("div#response").append($messageLine);
+            }
+            break;
+        case 'CONTACTOS':
+            {
+                //actualizacion de la lista de contactos...
+                var usuarios = mensaje.usuarios;
+                $lista_usuario.empty();
+                for (i = 0; i < usuarios.length; i++) {
+                    var $li = $('<li id="' + usuarios[i] + '" onclick="cargarVentanaChatParticular(this.id,true)">' + usuarios[i] + '<span class="badge"></badge></li>');
+                    $lista_usuario.append($li);
+                }
+            }
+            break;
+        case 'ERROR':
+            alert(mensaje.mensaje);
+            break;
+
     }
 }
 function enviarMensaje() {
