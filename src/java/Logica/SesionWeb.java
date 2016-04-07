@@ -7,12 +7,13 @@ package Logica;
 
 import Persistencia.Modelo.Mensaje;
 import Persistencia.Modelo.Usuario;
+import com.ChatEndpoint;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.websocket.EncodeException;
+import javax.websocket.CloseReason;
 import javax.websocket.Session;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -33,7 +34,6 @@ public class SesionWeb implements ISesion {
     @Override
     public void mandarMensaje(Mensaje mensaje) {
         try {
-
             if (sesion.isOpen()) {
                 JSONObject json = new JSONObject();
                 json.append("envia", mensaje.getEnvia());
@@ -50,22 +50,51 @@ public class SesionWeb implements ISesion {
 
     @Override
     public void notificarUsuariosLogeados(HashMap<String, Usuario> usuariosConectados) {
-       try {
+        try {
             if (sesion.isOpen()) {
-                JSONObject json = new JSONObject();
+                JSONObject objetoJSON = new JSONObject();
                 JSONArray usuarios = new JSONArray();
                 for (Map.Entry<String, Usuario> entry : usuariosConectados.entrySet()) {
                     String nick = entry.getKey();
-                    usuarios.put(nick);                    
+                    usuarios.put(nick);
                 }
-                json.put("usuarios", usuarios);
-                json.append("tipo", "CONTACTOS");
-                sesion.getBasicRemote().sendText(json.toString());
+                objetoJSON.put("usuarios", usuarios);
+                objetoJSON.append("tipo", "CONTACTOS");
+                sesion.getBasicRemote().sendText(objetoJSON.toString());
             }
         } catch (IOException ex) {
             Logger.getLogger(SesionWeb.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+    }
+
+    @Override
+    public void exitoAlLogear(Usuario usuario) {
+        try {
+            if (sesion.isOpen()) {
+                sesion.getUserProperties().put("nick", usuario.getNick());
+                JSONObject objetoJSON = new JSONObject();
+                objetoJSON.append("tipo", "OK");
+                objetoJSON.append("token", usuario.getToken());
+                System.out.println(usuario.toString());
+                System.out.println(usuario.getToken());
+                sesion.getBasicRemote().sendText(objetoJSON.toString());
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(SesionWeb.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    @Override
+    public void notificarError(TipoMensaje tipoMensaje, String mensaje) {
+        try {
+            JSONObject o = new JSONObject();
+            o.append("tipo", "" + tipoMensaje);
+            o.append("mensaje", mensaje);
+            sesion.getBasicRemote().sendText(o.toString());
+            sesion.close(new CloseReason(CloseReason.CloseCodes.VIOLATED_POLICY, "Algo salio muy mal... o no tan mal(como login mal viste..)"));
+        } catch (IOException ex) {
+            Logger.getLogger(ChatEndpoint.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
 }

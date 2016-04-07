@@ -6,6 +6,7 @@
 package Persistencia.Modelo;
 
 import Logica.ISesion;
+import Logica.TipoMensaje;
 import java.io.Serializable;
 import java.util.HashMap;
 
@@ -17,12 +18,31 @@ public class Usuario implements Serializable {
 
     @Override
     public String toString() {
-        return "Usuario{" + "id=" + id + ", nick=" + nick + ", clave=" + clave + ", sesion=" + sesion + '}';
+        return "Usuario{" + "id=" + id + ", nick=" + nick + ", clave=" + clave + ", sesion=" + sesion + ", token=" + token + '}';
     }
 
     private int id;
     private String nick, clave;
     ISesion sesion;
+
+    private String token;
+
+    public Usuario(String nick, String clave, ISesion sesion) {
+        this.nick = nick;
+        this.clave = clave;
+        this.sesion = sesion;
+    }
+
+    public Usuario() {
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
 
     public ISesion getSesion() {
         return sesion;
@@ -62,6 +82,35 @@ public class Usuario implements Serializable {
 
     public void notificarUsuariosLogeados(HashMap<String, Usuario> usuariosConectados) {
         sesion.notificarUsuariosLogeados(usuariosConectados);
+    }
+
+    /**
+     * Verifica que las token sean iguales
+     *
+     * @param token
+     * @return si lo son.
+     */
+    public boolean esEl(String token) {
+        return this.token.equals(token);
+    }
+
+    /**
+     * Le manda un mensaje al cliente del tipo OK, indicandole que logeo con
+     * exito y la token generada.
+     */
+    public void exitoAlLogear() {
+        sesion.exitoAlLogear(this);
+    }
+
+    /**
+     * Le manda un mensaje al cliente del tipo LOGIN, indicandole que no pudo
+     * iniciar sesion.
+     *
+     * @param tipoMensaje
+     * @param mensaje
+     */
+    public void notificarError(TipoMensaje tipoMensaje, String mensaje) {
+        sesion.notificarError(tipoMensaje, mensaje);
     }
 
 }

@@ -9,6 +9,7 @@ import Persistencia.FachadaPersistencia;
 import Persistencia.MedioAlmacenamientoTipo;
 import Persistencia.Modelo.Mensaje;
 import Persistencia.Modelo.Usuario;
+import Persistencia.ObjetoNoEncontrado;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,32 +22,34 @@ public class ControladorChat {
     private static ControladorChat instancia = null;
 
     private static final MedioAlmacenamientoTipo MEDIO = MedioAlmacenamientoTipo.BD;
-    private HashMap<String, Usuario> usuariosConectados;
+    private final HashMap<String, Usuario> usuariosConectados;
 
     /**
      * Verifica si el usuario existe y puede logear, si es el caso es agregado
      * al hashmap de usuarios logeados, casi contrario retorna falso.
      *
-     * @param u
-     * @return true si logea, false sino.
+     * @param nick
+     * @param clave
+     * @param sesion
      */
-    public synchronized boolean agregarUsuario(Usuario u) {
-
-////        try {
-//        Usuario usuario = FachadaPersistencia.getUsuario(MEDIO, u.getNick());
-//        if (usuario.getClave().equals(u.getClave())) {
-//            u.setId(usuario.getId());
-//            usuariosConectados.put(usuario.getNick(), u);
-//            return true;
-//        } else {
-//            return false;
+    public synchronized void agregarUsuario(String nick, String clave, ISesion sesion) {
+        Usuario usuario;
+//        try {
+//            usuario = FachadaPersistencia.getUsuario(MEDIO, nick);
+        usuario = new Usuario(nick, Encriptar.encriptaEnMD5(clave), sesion);
+        if (usuario.getClave().equals(Encriptar.encriptaEnMD5(clave))) {
+            usuario.setToken(Encriptar.crearCodigo());
+            usuario.setSesion(sesion);
+            usuariosConectados.put(usuario.getNick(), usuario);
+            usuario.exitoAlLogear();
+            notificarUsuariosLogeados();
+        } else {
+            usuario.notificarError(TipoMensaje.LOGIN, "Credenciales no validas :(");
+        }
+//        } 
+//        catch (ObjetoNoEncontrado e) {
+//            sesion.notificarError(TipoMensaje.LOGIN, "Credenciales no validas :(");
 //        }
-////        } catch (org.hibernate.ObjectNotFoundException e) {
-////            return false;
-////        }
-        usuariosConectados.put(u.getNick(), u);
-        notificarUsuariosLogeados();
-        return true;
 
     }
 
@@ -63,14 +66,32 @@ public class ControladorChat {
     }
 
     /**
-     * manda un mensaje al destinatario y lo guarda en la bd...
+     * Manda un mensaje al destinatario. Almacena el mensaje en un medio
+     * persistente. Verifica que el usuario que esta mandando el mensaje, es
+     * quien dice ser realmente, esto se hace con el TOKEN que el usuario recibe
+     * al momento de logearse, en cada mensaje que envia tambien viaja el token
+     * y es comparado con el token que se genero al momento de logearse, si no
+     * llegan a ser las mismas salta una excepcion AccesoIlegal. Si el mensaje
+     * es enviado a un destinatario que no existe o a si mismo se produce una
+     * excepcion DestinatarioIncorrecto.
      *
      * @param mensaje
+     * @param token
+     * @throws Logica.AccesoIlegal
      */
-    public synchronized void mandarMensaje(Mensaje mensaje) {
-        if (usuariosConectados.containsKey(mensaje.getRecibe())) {
-            usuariosConectados.get(mensaje.getRecibe()).mandarMensaje(mensaje);
-            //FachadaPersistencia.guardarMensaje(MEDIO, mensaje);
+    public synchronized void mandarMensaje(Mensaje mensaje, String token) throws AccesoIlegal {
+        if (usuariosConectados.containsKey(mensaje.getEnvia())) {
+            Usuario usuarioEnviaMensaje = usuariosConectados.get(mensaje.getEnvia());
+            if (usuarioEnviaMensaje.esEl(token)) {
+                if (usuariosConectados.containsKey(mensaje.getRecibe()) && !mensaje.validar()) {
+                    usuariosConectados.get(mensaje.getRecibe()).mandarMensaje(mensaje);
+                    //FachadaPersistencia.guardarMensaje(MEDIO, mensaje);
+                } else {
+                    usuarioEnviaMensaje.notificarError(TipoMensaje.ERROR, "El destinatario no es valido !  :(");
+                }
+            } else {
+                throw new AccesoIlegal("Okey... quien eres ?! :(");
+            }
         }
     }
 

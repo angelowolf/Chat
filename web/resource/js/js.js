@@ -6,8 +6,9 @@ var $lista_usuario;
 var $mensaje;
 var $destino;
 var $response;
-function mensajeRecibido(evt) {
+var token;
 
+function mensajeRecibido(evt) {
     var mensaje = JSON.parse(evt.data);
     var tipo = mensaje.tipo;
     console.log(tipo);
@@ -18,25 +19,28 @@ function mensajeRecibido(evt) {
         //recibi un mensaje....
         //var msg = eval('(' + evt.data + ')');
         var msg = JSON.parse(evt.data); // native API
-        cargarVentanaChatParticular(msg.envia);
-        var $messageLine = $('<br> <div class="message badge pull-left">' + msg.mensaje
-                + '</div>');
-        $response.append($messageLine);
+        cargarVentanaChatParticular(msg.envia, false);
+        $elchat = $('#chat-' + msg.envia);
+        $lista_usuario.find("#" + msg.envia + ' > .badge').text("nuevo");
+        var $messageLine = $('<br> <div class="message badge pull-left">' + msg.mensaje + '</div>');
+        $elchat.find("div#response").append($messageLine);
     } else if (tipo.toString() === 'CONTACTOS') {
         //actualizacion de la lista de contactos...
         console.log(mensaje.usuarios);
         var usuarios = mensaje.usuarios;
         $lista_usuario.empty();
         for (i = 0; i < usuarios.length; i++) {
-            var $li = $('<li id="' + usuarios[i] + '" onclick="cargarVentanaChatParticular(this.id)">' + usuarios[i] + '<span class="badge"></badge></li>');
+            var $li = $('<li id="' + usuarios[i] + '" onclick="cargarVentanaChatParticular(this.id,true)">' + usuarios[i] + '<span class="badge"></badge></li>');
             $lista_usuario.append($li);
         }
     } else if (tipo.toString() === "OK") {
         $('#ventana-login').hide();
         $('#ventana_chat').show();
         $('#chat-defalut').hide();
+        console.log(mensaje.token);
+        token = mensaje.token;
     } else if (tipo.toString() === 'ERROR') {
-        alert('Hiciste algo... que mal :(....'+mensaje.mensaje);
+        alert(mensaje.mensaje);
     }
 }
 function enviarMensaje() {
@@ -44,7 +48,7 @@ function enviarMensaje() {
             + '</div>');
     $response.append($messageLine);
     var msg = '{"mensaje":"' + $mensaje.val() + '", "envia":"'
-            + $nick.val() + '", "recibe":"' + $destino.val() + '","tipo":"MENSAJE"}';
+            + $nick.val() + '", "recibe":"' + $destino.val() + '","tipo":"MENSAJE","token":"' + token + '"}';
     wsocket.send(msg);
     $mensaje.val('').focus();
 }
@@ -59,27 +63,30 @@ function conectarWebSocket() {
     };
 }
 
-function cargarVentanaChatParticular(id) {
+function cargarVentanaChatParticular(id, mostrar) {
     $elchat = $('#chat-' + id);
     if ($elchat.length) {
-        esconderChats();
-        $destino = $elchat.find("input#destino");
-        $mensaje = $elchat.find("input#mensaje");
-        $response = $elchat.find("div#response");
-        $elchat.show();
+        if (mostrar) {
+            $lista_usuario.find("#" + id + ' > .badge').text("");
+            esconderChats();
+            $destino = $elchat.find("input#destino");
+            $mensaje = $elchat.find("input#mensaje");
+            $response = $elchat.find("div#response");
+            $elchat.show();
+        }
     } else {
         $elchat = $('#chat-defalut').clone();
         $elchat.attr("id", 'chat-' + id);
         $('#ventana_chat').append($elchat);
         $elchat.find("label#nombre").text(id);
         $elchat.find("input#destino").val(id);
-        $mensaje = $elchat.find("input#mensaje");
-        $destino = $elchat.find("input#destino");
-        $response = $elchat.find("div#response");
-        esconderChats();
-        $elchat.show();
-
-
+        if (mostrar) {
+            $mensaje = $elchat.find("input#mensaje");
+            $destino = $elchat.find("input#destino");
+            $response = $elchat.find("div#response");
+            esconderChats();
+            $elchat.show();
+        }
         $btn = $elchat.find("input#chat-boton");
         $btn.click(function (e) {
             e.preventDefault();

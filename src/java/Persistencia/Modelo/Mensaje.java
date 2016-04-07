@@ -14,14 +14,18 @@ import java.util.Date;
  */
 public class Mensaje implements Serializable {
 
-    @Override
-    public String toString() {
-        return "Mensaje{" + "id=" + id + ", mensaje=" + mensaje + ", envia=" + envia + ", recibe=" + recibe + ", fecha=" + fecha + '}';
-    }
-
     private int id;
     private String mensaje, envia, recibe;
     private Date fecha;
+
+    public Mensaje() {
+    }
+
+    public Mensaje(String mensaje, String envia, String recibe) {
+        this.mensaje = mensaje;
+        this.envia = envia;
+        this.recibe = recibe;
+    }
 
     public String getEnvia() {
         return envia;
@@ -63,10 +67,16 @@ public class Mensaje implements Serializable {
         this.fecha = fecha;
     }
 
+    @Override
+    public String toString() {
+        return "Mensaje{" + "id=" + id + ", mensaje=" + mensaje + ", envia=" + envia + ", recibe=" + recibe + ", fecha=" + fecha + '}';
+    }
+
     /**
-     * verifica que los nicks sean distintos...
+     * Verifica si el nick destino es igual al nick origen. Si envia= 'luis' y
+     * recibe = 'luis' devolvera true.
      *
-     * @return true si son !=
+     * @return true si son iguales.
      */
     public boolean validar() {
         return (getEnvia().equals(getRecibe()));

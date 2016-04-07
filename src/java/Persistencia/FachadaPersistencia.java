@@ -14,7 +14,7 @@ import Persistencia.Modelo.Usuario;
  */
 public class FachadaPersistencia {
 
-    public static Usuario getUsuario(MedioAlmacenamientoTipo tipo, String nick) {
+    public static Usuario getUsuario(MedioAlmacenamientoTipo tipo, String nick) throws ObjetoNoEncontrado {
         MedioAlmacenamiento ma = MedioAlmacenamientoFactory.crearMedioAlmacenamiento(tipo, ModeloTipo.USUARIO);
         return (Usuario) ma.get(nick);
     }

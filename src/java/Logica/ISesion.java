@@ -15,8 +15,36 @@ import java.util.HashMap;
  */
 public interface ISesion {
 
+    /**
+     * Le manda un mensaje al cliente que representa una conversacion con
+     * alguien.
+     *
+     * @param mensaje
+     */
     public void mandarMensaje(Mensaje mensaje);
 
+    /**
+     * Le manda todos los contactos que estan logeados al cliente.
+     *
+     * @param usuariosConectados
+     */
     public void notificarUsuariosLogeados(HashMap<String, Usuario> usuariosConectados);
-    
+
+    /**
+     * Manda un mensaje al cliente indicandole que pudo logear con exito, como
+     * la token generada.
+     *
+     * @param usuario
+     */
+    public void exitoAlLogear(Usuario usuario);
+
+    /**
+     * Manda un mensaje al cliente indicando que algo salio mal, o hizo algo
+     * mal, o esta intentando hacer algo malo y cierra la sesion.
+     *
+     * @param tipoMensaje Tipo de mensaje.
+     * @param mensaje Mensaje del error.
+     */
+    public void notificarError(TipoMensaje tipoMensaje, String mensaje);
+
 }
