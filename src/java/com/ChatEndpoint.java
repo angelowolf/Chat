@@ -20,6 +20,7 @@ import Persistencia.Modelo.Usuario;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.websocket.CloseReason;
 import javax.websocket.OnClose;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
@@ -63,7 +64,7 @@ public class ChatEndpoint {
         {
             try {
                 session.getBasicRemote().sendText(o.toString());
-                session.close();
+                session.close(new CloseReason(CloseReason.CloseCodes.VIOLATED_POLICY, "Algo salio muy mal... o no tan mal...."));
             } catch (IOException ex) {
                 Logger.getLogger(ChatEndpoint.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -105,7 +106,7 @@ public class ChatEndpoint {
                     msj.setEnvia(objetoJSON.getString("envia"));
                     msj.setRecibe(objetoJSON.getString("recibe"));
                     msj.setMensaje(objetoJSON.getString("mensaje"));
-                    if (msj.validar()) {
+                    if (!msj.validar()) {
                         ch.mandarMensaje(msj);
                     } else {
                         fail(session, TipoMensaje.ERROR, "NO TE PODES ENVIAR MSJ A VOS :(");
