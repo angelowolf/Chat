@@ -1,0 +1,339 @@
+30-Mar-2016 01:16:52.748 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.30
+30-Mar-2016 01:16:52.750 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 1 2015 22:30:46 UTC
+30-Mar-2016 01:16:52.750 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.30.0
+30-Mar-2016 01:16:52.750 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+30-Mar-2016 01:16:52.750 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+30-Mar-2016 01:16:52.750 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+30-Mar-2016 01:16:52.750 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_71\jre
+30-Mar-2016 01:16:52.751 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_71-b15
+30-Mar-2016 01:16:52.751 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+30-Mar-2016 01:16:52.751 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\tomcat-ssl
+30-Mar-2016 01:16:52.751 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\tomcat-ssl
+30-Mar-2016 01:16:52.751 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\tomcat-ssl\conf\logging.properties
+30-Mar-2016 01:16:52.752 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+30-Mar-2016 01:16:52.752 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=C:\tomcat-ssl\endorsed
+30-Mar-2016 01:16:52.752 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\tomcat-ssl
+30-Mar-2016 01:16:52.753 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\tomcat-ssl
+30-Mar-2016 01:16:52.753 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\tomcat-ssl\temp
+30-Mar-2016 01:16:52.754 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Cargada la biblioteca nativa APR de Apache Tomcat 1.1.33 con la versión APR 1.5.1.
+30-Mar-2016 01:16:52.754 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Capacidades APR: IPv6 [true], enviar fichero [true], aceptar filtros [false], aleatorio [true].
+30-Mar-2016 01:16:53.262 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL inicializado correctamente (OpenSSL 1.0.1m 19 Mar 2015)
+30-Mar-2016 01:16:53.360 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-apr-8080"]
+30-Mar-2016 01:16:53.367 SEVERE [main] org.apache.coyote.AbstractProtocol.init Failed to initialize end point associated with ProtocolHandler ["http-apr-8080"]
+ java.lang.Exception: Ligado de conector falló: [730013] Intento de acceso a un socket no permitido por sus permisos de acceso.  
+	at org.apache.tomcat.util.net.AprEndpoint.bind(AprEndpoint.java:471)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:742)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:458)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:568)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:851)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:576)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:599)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:310)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:484)
+
+30-Mar-2016 01:16:53.369 SEVERE [main] org.apache.catalina.core.StandardService.initInternal No pude inicializar el conector [Connector[HTTP/1.1-8080]]
+ org.apache.catalina.LifecycleException: Failed to initialize component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:106)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:568)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:851)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:576)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:599)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:310)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:484)
+Caused by: org.apache.catalina.LifecycleException: Falló la inicialización del manejador de protocolo
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:962)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	... 12 more
+Caused by: java.lang.Exception: Ligado de conector falló: [730013] Intento de acceso a un socket no permitido por sus permisos de acceso.  
+	at org.apache.tomcat.util.net.AprEndpoint.bind(AprEndpoint.java:471)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:742)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:458)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:960)
+	... 13 more
+
+30-Mar-2016 01:16:53.393 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8443"]
+30-Mar-2016 01:16:53.594 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+30-Mar-2016 01:16:53.596 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-apr-8009"]
+30-Mar-2016 01:16:53.598 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1118 ms
+30-Mar-2016 01:16:53.614 INFO [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio Catalina
+30-Mar-2016 01:16:53.614 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.30
+30-Mar-2016 01:16:53.621 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\docs de la aplicación web
+30-Mar-2016 01:16:53.794 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\docs has finished in 171 ms
+30-Mar-2016 01:16:53.794 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\examples de la aplicación web
+30-Mar-2016 01:16:54.040 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\examples has finished in 246 ms
+30-Mar-2016 01:16:54.041 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\host-manager de la aplicación web
+30-Mar-2016 01:16:54.060 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\host-manager has finished in 19 ms
+30-Mar-2016 01:16:54.060 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\manager de la aplicación web
+30-Mar-2016 01:16:54.080 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\manager has finished in 20 ms
+30-Mar-2016 01:16:54.080 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\ROOT de la aplicación web
+30-Mar-2016 01:16:54.096 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\ROOT has finished in 16 ms
+30-Mar-2016 01:16:54.098 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8443"]
+30-Mar-2016 01:16:54.102 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-apr-8009"]
+30-Mar-2016 01:16:54.104 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 505 ms
+30-Mar-2016 01:35:51.148 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.30
+30-Mar-2016 01:35:51.149 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 1 2015 22:30:46 UTC
+30-Mar-2016 01:35:51.150 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.30.0
+30-Mar-2016 01:35:51.150 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+30-Mar-2016 01:35:51.150 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+30-Mar-2016 01:35:51.150 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+30-Mar-2016 01:35:51.151 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_71\jre
+30-Mar-2016 01:35:51.151 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_71-b15
+30-Mar-2016 01:35:51.151 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+30-Mar-2016 01:35:51.151 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\tomcat-ssl
+30-Mar-2016 01:35:51.151 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\tomcat-ssl
+30-Mar-2016 01:35:51.151 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\tomcat-ssl\conf\logging.properties
+30-Mar-2016 01:35:51.151 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+30-Mar-2016 01:35:51.151 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=C:\tomcat-ssl\endorsed
+30-Mar-2016 01:35:51.151 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\tomcat-ssl
+30-Mar-2016 01:35:51.151 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\tomcat-ssl
+30-Mar-2016 01:35:51.152 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\tomcat-ssl\temp
+30-Mar-2016 01:35:51.152 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Cargada la biblioteca nativa APR de Apache Tomcat 1.1.33 con la versión APR 1.5.1.
+30-Mar-2016 01:35:51.152 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Capacidades APR: IPv6 [true], enviar fichero [true], aceptar filtros [false], aleatorio [true].
+30-Mar-2016 01:35:51.711 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL inicializado correctamente (OpenSSL 1.0.1m 19 Mar 2015)
+30-Mar-2016 01:35:51.802 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-apr-8079"]
+30-Mar-2016 01:35:51.820 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8443"]
+30-Mar-2016 01:35:52.076 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+30-Mar-2016 01:35:52.078 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-apr-8009"]
+30-Mar-2016 01:35:52.080 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1228 ms
+30-Mar-2016 01:35:52.107 INFO [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio Catalina
+30-Mar-2016 01:35:52.107 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.30
+30-Mar-2016 01:35:52.114 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\docs de la aplicación web
+30-Mar-2016 01:35:52.323 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+30-Mar-2016 01:35:52.357 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\docs has finished in 242 ms
+30-Mar-2016 01:35:52.357 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\examples de la aplicación web
+30-Mar-2016 01:35:52.586 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+30-Mar-2016 01:35:52.648 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\examples has finished in 291 ms
+30-Mar-2016 01:35:52.648 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\host-manager de la aplicación web
+30-Mar-2016 01:35:52.714 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+30-Mar-2016 01:35:52.736 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\host-manager has finished in 88 ms
+30-Mar-2016 01:35:52.736 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\manager de la aplicación web
+30-Mar-2016 01:35:52.788 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+30-Mar-2016 01:35:52.790 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\manager has finished in 54 ms
+30-Mar-2016 01:35:52.790 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\ROOT de la aplicación web
+30-Mar-2016 01:35:52.818 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+30-Mar-2016 01:35:52.820 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\ROOT has finished in 30 ms
+30-Mar-2016 01:35:52.823 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-apr-8079"]
+30-Mar-2016 01:35:52.828 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8443"]
+30-Mar-2016 01:35:52.829 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-apr-8009"]
+30-Mar-2016 01:35:52.830 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 750 ms
+30-Mar-2016 01:35:53.285 INFO [http-apr-8079-exec-2] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración C:\tomcat-ssl\conf\Catalina\localhost\Chat.xml
+30-Mar-2016 01:35:53.328 INFO [http-apr-8079-exec-2] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+30-Mar-2016 01:35:53.339 INFO [http-apr-8079-exec-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\tomcat-ssl\conf\Catalina\localhost\Chat.xml has finished in 53 ms
+30-Mar-2016 01:35:53.342 INFO [http-apr-8079-exec-3] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Chat]] after start() had already been called. The second call will be ignored.
+30-Mar-2016 01:37:32.080 INFO [http-apr-8079-exec-4] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+30-Mar-2016 01:37:32.859 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.reload Falló la recarga del contexto [/Chat]
+30-Mar-2016 01:37:32.859 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+30-Mar-2016 01:37:32.907 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+30-Mar-2016 01:37:32.911 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+30-Mar-2016 01:37:35.983 INFO [http-apr-8079-exec-4] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+30-Mar-2016 01:40:46.275 INFO [http-nio-8443-exec-13] com.ChatEndpoint.open entra
+30-Mar-2016 01:40:50.224 SEVERE [http-nio-8443-exec-3] org.apache.tomcat.websocket.pojo.PojoEndpointBase.onError No error handling configured for [com.ChatEndpoint] and the following error occurred
+ javax.json.JsonException: Provider org.glassfish.json.JsonProviderImpl not found
+	at javax.json.spi.JsonProvider.provider(JsonProvider.java:97)
+	at javax.json.Json.createReader(Json.java:208)
+	at com.ChatMessageDecoder.decode(ChatMessageDecoder.java:34)
+	at com.ChatMessageDecoder.decode(ChatMessageDecoder.java:21)
+	at org.apache.tomcat.websocket.pojo.PojoMessageHandlerWholeText.decode(PojoMessageHandlerWholeText.java:108)
+	at org.apache.tomcat.websocket.pojo.PojoMessageHandlerWholeText.decode(PojoMessageHandlerWholeText.java:39)
+	at org.apache.tomcat.websocket.pojo.PojoMessageHandlerWholeBase.onMessage(PojoMessageHandlerWholeBase.java:57)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:393)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:494)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:289)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:130)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:60)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler$WsReadListener.onDataAvailable(WsHttpUpgradeHandler.java:183)
+	at org.apache.coyote.http11.upgrade.AbstractServletInputStream.onDataAvailable(AbstractServletInputStream.java:198)
+	at org.apache.coyote.http11.upgrade.AbstractProcessor.upgradeDispatch(AbstractProcessor.java:96)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:669)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: org.glassfish.json.JsonProviderImpl
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1333)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1167)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at javax.json.spi.JsonProvider.provider(JsonProvider.java:94)
+	... 21 more
+
+30-Mar-2016 01:40:50.227 INFO [http-nio-8443-exec-3] com.ChatEndpoint.close se fue
+30-Mar-2016 01:42:51.863 INFO [main] org.apache.catalina.core.StandardServer.await Se ha recibido un comando de apagado a través del puerto de apagado. Parando la instancia del Servidor.
+30-Mar-2016 01:42:51.863 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-apr-8079"]
+30-Mar-2016 01:42:51.917 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8443"]
+30-Mar-2016 01:42:51.967 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-apr-8009"]
+30-Mar-2016 01:42:52.017 INFO [main] org.apache.catalina.core.StandardService.stopInternal Parando servicio Catalina
+30-Mar-2016 01:42:52.034 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-apr-8079"]
+30-Mar-2016 01:42:52.086 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8443"]
+30-Mar-2016 01:42:52.087 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-apr-8009"]
+30-Mar-2016 01:42:52.137 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-apr-8079"]
+30-Mar-2016 01:42:52.137 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8443"]
+30-Mar-2016 01:42:52.138 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-apr-8009"]
+30-Mar-2016 01:44:42.807 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.30
+30-Mar-2016 01:44:42.808 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 1 2015 22:30:46 UTC
+30-Mar-2016 01:44:42.808 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.30.0
+30-Mar-2016 01:44:42.808 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+30-Mar-2016 01:44:42.808 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+30-Mar-2016 01:44:42.808 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+30-Mar-2016 01:44:42.808 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_71\jre
+30-Mar-2016 01:44:42.808 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_71-b15
+30-Mar-2016 01:44:42.808 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+30-Mar-2016 01:44:42.809 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\tomcat-ssl
+30-Mar-2016 01:44:42.809 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\tomcat-ssl
+30-Mar-2016 01:44:42.809 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\tomcat-ssl\conf\logging.properties
+30-Mar-2016 01:44:42.809 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+30-Mar-2016 01:44:42.809 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=C:\tomcat-ssl\endorsed
+30-Mar-2016 01:44:42.809 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\tomcat-ssl
+30-Mar-2016 01:44:42.810 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\tomcat-ssl
+30-Mar-2016 01:44:42.810 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\tomcat-ssl\temp
+30-Mar-2016 01:44:42.810 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Cargada la biblioteca nativa APR de Apache Tomcat 1.1.33 con la versión APR 1.5.1.
+30-Mar-2016 01:44:42.810 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Capacidades APR: IPv6 [true], enviar fichero [true], aceptar filtros [false], aleatorio [true].
+30-Mar-2016 01:44:43.347 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL inicializado correctamente (OpenSSL 1.0.1m 19 Mar 2015)
+30-Mar-2016 01:44:43.448 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-apr-8079"]
+30-Mar-2016 01:44:43.467 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8443"]
+30-Mar-2016 01:44:43.680 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+30-Mar-2016 01:44:43.682 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-apr-8009"]
+30-Mar-2016 01:44:43.683 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1204 ms
+30-Mar-2016 01:44:43.702 INFO [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio Catalina
+30-Mar-2016 01:44:43.703 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.30
+30-Mar-2016 01:44:43.708 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración C:\tomcat-ssl\conf\Catalina\localhost\Chat.xml
+30-Mar-2016 01:44:43.930 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+30-Mar-2016 01:44:44.100 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\tomcat-ssl\conf\Catalina\localhost\Chat.xml has finished in 385 ms
+30-Mar-2016 01:44:44.103 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\docs de la aplicación web
+30-Mar-2016 01:44:44.199 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+30-Mar-2016 01:44:44.201 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\docs has finished in 99 ms
+30-Mar-2016 01:44:44.201 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\examples de la aplicación web
+30-Mar-2016 01:44:44.424 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+30-Mar-2016 01:44:44.448 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\examples has finished in 247 ms
+30-Mar-2016 01:44:44.448 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\host-manager de la aplicación web
+30-Mar-2016 01:44:44.487 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+30-Mar-2016 01:44:44.489 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\host-manager has finished in 41 ms
+30-Mar-2016 01:44:44.489 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\manager de la aplicación web
+30-Mar-2016 01:44:44.525 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+30-Mar-2016 01:44:44.527 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\manager has finished in 37 ms
+30-Mar-2016 01:44:44.527 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\ROOT de la aplicación web
+30-Mar-2016 01:44:44.556 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+30-Mar-2016 01:44:44.559 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\ROOT has finished in 32 ms
+30-Mar-2016 01:44:44.562 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-apr-8079"]
+30-Mar-2016 01:44:44.569 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8443"]
+30-Mar-2016 01:44:44.571 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-apr-8009"]
+30-Mar-2016 01:44:44.571 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 887 ms
+30-Mar-2016 01:44:45.088 INFO [http-apr-8079-exec-3] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+30-Mar-2016 01:44:45.208 INFO [http-apr-8079-exec-3] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+30-Mar-2016 01:44:52.405 INFO [http-nio-8443-exec-9] com.ChatEndpoint.open entra
+30-Mar-2016 01:44:55.918 SEVERE [http-nio-8443-exec-10] org.apache.tomcat.websocket.pojo.PojoEndpointBase.onError No error handling configured for [com.ChatEndpoint] and the following error occurred
+ javax.json.JsonException: Provider org.glassfish.json.JsonProviderImpl could not be instantiated: java.lang.ClassCastException: org.glassfish.json.JsonProviderImpl cannot be cast to javax.json.spi.JsonProvider
+	at javax.json.spi.JsonProvider.provider(JsonProvider.java:100)
+	at javax.json.Json.createReader(Json.java:208)
+	at com.ChatMessageDecoder.decode(ChatMessageDecoder.java:34)
+	at com.ChatMessageDecoder.decode(ChatMessageDecoder.java:21)
+	at org.apache.tomcat.websocket.pojo.PojoMessageHandlerWholeText.decode(PojoMessageHandlerWholeText.java:108)
+	at org.apache.tomcat.websocket.pojo.PojoMessageHandlerWholeText.decode(PojoMessageHandlerWholeText.java:39)
+	at org.apache.tomcat.websocket.pojo.PojoMessageHandlerWholeBase.onMessage(PojoMessageHandlerWholeBase.java:57)
+	at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:393)
+	at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:494)
+	at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:289)
+	at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:130)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:60)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler$WsReadListener.onDataAvailable(WsHttpUpgradeHandler.java:183)
+	at org.apache.coyote.http11.upgrade.AbstractServletInputStream.onDataAvailable(AbstractServletInputStream.java:198)
+	at org.apache.coyote.http11.upgrade.AbstractProcessor.upgradeDispatch(AbstractProcessor.java:96)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:669)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassCastException: org.glassfish.json.JsonProviderImpl cannot be cast to javax.json.spi.JsonProvider
+	at javax.json.spi.JsonProvider.provider(JsonProvider.java:95)
+	... 21 more
+
+30-Mar-2016 01:44:55.921 INFO [http-nio-8443-exec-10] com.ChatEndpoint.close se fue
+30-Mar-2016 02:04:20.342 INFO [http-apr-8079-exec-12] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración C:\tomcat-ssl\conf\Catalina\localhost\ChatSSL.xml
+30-Mar-2016 02:04:20.490 INFO [http-apr-8079-exec-12] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\tomcat-ssl\conf\Catalina\localhost\ChatSSL.xml has finished in 148 ms
+30-Mar-2016 02:04:20.493 INFO [http-apr-8079-exec-13] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/ChatSSL]] after start() had already been called. The second call will be ignored.
+30-Mar-2016 02:04:28.012 INFO [http-apr-8079-exec-18] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto /ChatSSL
+30-Mar-2016 02:04:28.036 INFO [http-apr-8079-exec-13] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración C:\tomcat-ssl\conf\Catalina\localhost\ChatSSL.xml
+30-Mar-2016 02:04:28.183 INFO [http-apr-8079-exec-13] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\tomcat-ssl\conf\Catalina\localhost\ChatSSL.xml has finished in 147 ms
+30-Mar-2016 02:04:28.186 INFO [http-apr-8079-exec-12] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/ChatSSL]] after start() had already been called. The second call will be ignored.
+30-Mar-2016 02:06:01.938 INFO [http-apr-8079-exec-22] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto /Chat
+30-Mar-2016 02:06:01.947 INFO [http-apr-8079-exec-25] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración C:\tomcat-ssl\conf\Catalina\localhost\Chat.xml
+30-Mar-2016 02:06:02.000 INFO [http-apr-8079-exec-25] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\tomcat-ssl\conf\Catalina\localhost\Chat.xml has finished in 53 ms
+30-Mar-2016 02:06:02.020 INFO [http-apr-8079-exec-16] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+30-Mar-2016 02:06:02.054 INFO [http-apr-8079-exec-16] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+30-Mar-2016 02:08:23.765 INFO [http-apr-8079-exec-29] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto /Chat
+30-Mar-2016 02:08:23.779 INFO [http-apr-8079-exec-26] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración C:\tomcat-ssl\conf\Catalina\localhost\Chat.xml
+30-Mar-2016 02:08:23.840 INFO [http-apr-8079-exec-26] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\tomcat-ssl\conf\Catalina\localhost\Chat.xml has finished in 61 ms
+30-Mar-2016 02:08:29.102 INFO [http-nio-8443-exec-12] com.ChatEndpoint.open entra
+30-Mar-2016 02:28:33.205 INFO [http-nio-8443-exec-20] com.ChatEndpoint.close se fue
+30-Mar-2016 02:31:57.495 INFO [http-nio-8443-exec-15] com.ChatEndpoint.open entra
+30-Mar-2016 02:35:51.639 INFO [http-nio-8443-exec-21] com.ChatEndpoint.close se fue
+30-Mar-2016 02:36:16.122 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Repliegue (undeploy) de la aplicación web que tiene como trayectoria de contexto /ChatSSL
+30-Mar-2016 02:36:16.129 INFO [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración C:\tomcat-ssl\conf\Catalina\localhost\ChatSSL.xml
+30-Mar-2016 02:36:16.133 SEVERE [localhost-startStop-2] org.apache.catalina.core.ContainerBase.addChildInternal ContainerBase.addChild: start: 
+ org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/ChatSSL]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:154)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:586)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1777)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@4cd82cf4]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:154)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4928)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5058)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 10 more
+Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\ang_2\OneDrive\Documentos\NetBeansProjects\ChatSSL\target\ChatSSL-1.0-SNAPSHOT] is not valid
+	at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:723)
+	at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:684)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 13 more
+
+30-Mar-2016 02:36:16.134 SEVERE [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDescriptor Error durante el despliegue del descriptor de configuración C:\tomcat-ssl\conf\Catalina\localhost\ChatSSL.xml
+ java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/ChatSSL]]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:729)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:586)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1777)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+30-Mar-2016 02:36:16.134 INFO [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\tomcat-ssl\conf\Catalina\localhost\ChatSSL.xml has finished in 5 ms
+30-Mar-2016 02:36:19.357 INFO [main] org.apache.catalina.core.StandardServer.await Se ha recibido un comando de apagado a través del puerto de apagado. Parando la instancia del Servidor.
+30-Mar-2016 02:36:19.357 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-apr-8079"]
+30-Mar-2016 02:36:19.410 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8443"]
+30-Mar-2016 02:36:19.461 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-apr-8009"]
+30-Mar-2016 02:36:19.511 INFO [main] org.apache.catalina.core.StandardService.stopInternal Parando servicio Catalina
+30-Mar-2016 02:36:19.527 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-apr-8079"]
+30-Mar-2016 02:36:19.579 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8443"]
+30-Mar-2016 02:36:19.579 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-apr-8009"]
+30-Mar-2016 02:36:19.629 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-apr-8079"]
+30-Mar-2016 02:36:19.630 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8443"]
+30-Mar-2016 02:36:19.630 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-apr-8009"]

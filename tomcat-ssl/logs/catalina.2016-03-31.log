@@ -1,0 +1,895 @@
+31-Mar-2016 00:02:54.228 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.30
+31-Mar-2016 00:02:54.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 1 2015 22:30:46 UTC
+31-Mar-2016 00:02:54.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.30.0
+31-Mar-2016 00:02:54.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+31-Mar-2016 00:02:54.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+31-Mar-2016 00:02:54.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+31-Mar-2016 00:02:54.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_71\jre
+31-Mar-2016 00:02:54.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_71-b15
+31-Mar-2016 00:02:54.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+31-Mar-2016 00:02:54.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\tomcat-ssl
+31-Mar-2016 00:02:54.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\tomcat-ssl
+31-Mar-2016 00:02:54.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\tomcat-ssl\conf\logging.properties
+31-Mar-2016 00:02:54.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+31-Mar-2016 00:02:54.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=C:\tomcat-ssl\endorsed
+31-Mar-2016 00:02:54.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\tomcat-ssl
+31-Mar-2016 00:02:54.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\tomcat-ssl
+31-Mar-2016 00:02:54.231 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\tomcat-ssl\temp
+31-Mar-2016 00:02:54.231 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Cargada la biblioteca nativa APR de Apache Tomcat 1.1.33 con la versión APR 1.5.1.
+31-Mar-2016 00:02:54.231 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Capacidades APR: IPv6 [true], enviar fichero [true], aceptar filtros [false], aleatorio [true].
+31-Mar-2016 00:02:54.794 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL inicializado correctamente (OpenSSL 1.0.1m 19 Mar 2015)
+31-Mar-2016 00:02:54.909 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-apr-8079"]
+31-Mar-2016 00:02:54.930 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8443"]
+31-Mar-2016 00:02:55.199 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+31-Mar-2016 00:02:55.200 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-apr-8009"]
+31-Mar-2016 00:02:55.201 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1297 ms
+31-Mar-2016 00:02:55.224 INFO [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio Catalina
+31-Mar-2016 00:02:55.224 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.30
+31-Mar-2016 00:02:55.231 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración C:\tomcat-ssl\conf\Catalina\localhost\Chat.xml
+31-Mar-2016 00:02:55.475 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Mar-2016 00:02:55.542 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\tomcat-ssl\conf\Catalina\localhost\Chat.xml has finished in 309 ms
+31-Mar-2016 00:02:55.542 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración C:\tomcat-ssl\conf\Catalina\localhost\ChatSSL.xml
+31-Mar-2016 00:02:55.549 SEVERE [localhost-startStop-1] org.apache.catalina.core.ContainerBase.addChildInternal ContainerBase.addChild: start: 
+ org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/ChatSSL]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:154)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:586)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1777)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@2a84773e]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:154)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4928)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5058)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 10 more
+Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\ang_2\OneDrive\Documentos\NetBeansProjects\ChatSSL\target\ChatSSL-1.0-SNAPSHOT] is not valid
+	at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:723)
+	at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:684)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 13 more
+
+31-Mar-2016 00:02:55.550 SEVERE [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Error durante el despliegue del descriptor de configuración C:\tomcat-ssl\conf\Catalina\localhost\ChatSSL.xml
+ java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/ChatSSL]]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:729)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:586)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1777)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+31-Mar-2016 00:02:55.551 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\tomcat-ssl\conf\Catalina\localhost\ChatSSL.xml has finished in 8 ms
+31-Mar-2016 00:02:55.551 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\docs de la aplicación web
+31-Mar-2016 00:02:55.602 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Mar-2016 00:02:55.607 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\docs has finished in 56 ms
+31-Mar-2016 00:02:55.607 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\examples de la aplicación web
+31-Mar-2016 00:02:56.399 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Mar-2016 00:02:56.423 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\examples has finished in 816 ms
+31-Mar-2016 00:02:56.423 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\host-manager de la aplicación web
+31-Mar-2016 00:02:56.470 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Mar-2016 00:02:56.473 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\host-manager has finished in 50 ms
+31-Mar-2016 00:02:56.473 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\manager de la aplicación web
+31-Mar-2016 00:02:56.546 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Mar-2016 00:02:56.549 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\manager has finished in 76 ms
+31-Mar-2016 00:02:56.549 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\ROOT de la aplicación web
+31-Mar-2016 00:02:56.616 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Mar-2016 00:02:56.618 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\ROOT has finished in 69 ms
+31-Mar-2016 00:02:56.621 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-apr-8079"]
+31-Mar-2016 00:02:56.626 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8443"]
+31-Mar-2016 00:02:56.628 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-apr-8009"]
+31-Mar-2016 00:02:56.629 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1427 ms
+31-Mar-2016 00:02:57.309 INFO [http-apr-8079-exec-2] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 00:02:57.381 INFO [http-apr-8079-exec-2] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 00:11:31.523 SEVERE [http-nio-8443-exec-1] org.apache.tomcat.websocket.pojo.PojoEndpointBase.onError No error handling configured for [com.ChatEndpoint] and the following error occurred
+ java.lang.NullPointerException
+	at java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
+	at java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at com.ChatEndpoint.open(ChatEndpoint.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.tomcat.websocket.pojo.PojoEndpointBase.doOnOpen(PojoEndpointBase.java:66)
+	at org.apache.tomcat.websocket.pojo.PojoEndpointServer.onOpen(PojoEndpointServer.java:70)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:128)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:707)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+31-Mar-2016 00:11:31.526 SEVERE [http-nio-8443-exec-1] org.apache.tomcat.websocket.pojo.PojoEndpointBase.onError No error handling configured for [com.ChatEndpoint] and the following error occurred
+ java.io.IOException: java.util.concurrent.ExecutionException: java.io.IOException: Unable to write the complete message as the WebSocket connection has been closed
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.startMessageBlock(WsRemoteEndpointImplBase.java:282)
+	at org.apache.tomcat.websocket.WsSession.sendCloseMessage(WsSession.java:584)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:488)
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:455)
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:449)
+	at org.apache.tomcat.websocket.pojo.PojoEndpointBase.handleOnOpenOrCloseError(PojoEndpointBase.java:96)
+	at org.apache.tomcat.websocket.pojo.PojoEndpointBase.doOnOpen(PojoEndpointBase.java:79)
+	at org.apache.tomcat.websocket.pojo.PojoEndpointServer.onOpen(PojoEndpointServer.java:70)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:128)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:707)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.ExecutionException: java.io.IOException: Unable to write the complete message as the WebSocket connection has been closed
+	at org.apache.tomcat.websocket.FutureToSendHandler.get(FutureToSendHandler.java:102)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.startMessageBlock(WsRemoteEndpointImplBase.java:275)
+	... 15 more
+Caused by: java.io.IOException: Unable to write the complete message as the WebSocket connection has been closed
+	at org.apache.tomcat.websocket.WsSession.registerFuture(WsSession.java:658)
+	at org.apache.tomcat.websocket.FutureToSendHandler.get(FutureToSendHandler.java:92)
+	... 16 more
+
+31-Mar-2016 00:11:31.527 INFO [http-nio-8443-exec-1] com.ChatEndpoint.close se fue
+31-Mar-2016 00:12:37.812 SEVERE [http-nio-8443-exec-2] org.apache.tomcat.websocket.pojo.PojoEndpointBase.onError No error handling configured for [com.ChatEndpoint] and the following error occurred
+ java.lang.NullPointerException
+	at java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
+	at java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at com.ChatEndpoint.open(ChatEndpoint.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.tomcat.websocket.pojo.PojoEndpointBase.doOnOpen(PojoEndpointBase.java:66)
+	at org.apache.tomcat.websocket.pojo.PojoEndpointServer.onOpen(PojoEndpointServer.java:70)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:128)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:707)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+31-Mar-2016 00:12:37.813 SEVERE [http-nio-8443-exec-2] org.apache.tomcat.websocket.pojo.PojoEndpointBase.onError No error handling configured for [com.ChatEndpoint] and the following error occurred
+ java.io.IOException: java.util.concurrent.ExecutionException: java.io.IOException: Unable to write the complete message as the WebSocket connection has been closed
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.startMessageBlock(WsRemoteEndpointImplBase.java:282)
+	at org.apache.tomcat.websocket.WsSession.sendCloseMessage(WsSession.java:584)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:488)
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:455)
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:449)
+	at org.apache.tomcat.websocket.pojo.PojoEndpointBase.handleOnOpenOrCloseError(PojoEndpointBase.java:96)
+	at org.apache.tomcat.websocket.pojo.PojoEndpointBase.doOnOpen(PojoEndpointBase.java:79)
+	at org.apache.tomcat.websocket.pojo.PojoEndpointServer.onOpen(PojoEndpointServer.java:70)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:128)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:707)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.ExecutionException: java.io.IOException: Unable to write the complete message as the WebSocket connection has been closed
+	at org.apache.tomcat.websocket.FutureToSendHandler.get(FutureToSendHandler.java:102)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.startMessageBlock(WsRemoteEndpointImplBase.java:275)
+	... 15 more
+Caused by: java.io.IOException: Unable to write the complete message as the WebSocket connection has been closed
+	at org.apache.tomcat.websocket.WsSession.registerFuture(WsSession.java:658)
+	at org.apache.tomcat.websocket.FutureToSendHandler.get(FutureToSendHandler.java:92)
+	... 16 more
+
+31-Mar-2016 00:12:37.814 INFO [http-nio-8443-exec-2] com.ChatEndpoint.close se fue
+31-Mar-2016 00:12:44.913 SEVERE [http-nio-8443-exec-10] org.apache.tomcat.websocket.pojo.PojoEndpointBase.onError No error handling configured for [com.ChatEndpoint] and the following error occurred
+ java.lang.NullPointerException
+	at java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
+	at java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at com.ChatEndpoint.open(ChatEndpoint.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.tomcat.websocket.pojo.PojoEndpointBase.doOnOpen(PojoEndpointBase.java:66)
+	at org.apache.tomcat.websocket.pojo.PojoEndpointServer.onOpen(PojoEndpointServer.java:70)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:128)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:707)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+31-Mar-2016 00:12:44.915 SEVERE [http-nio-8443-exec-10] org.apache.tomcat.websocket.pojo.PojoEndpointBase.onError No error handling configured for [com.ChatEndpoint] and the following error occurred
+ java.io.IOException: java.util.concurrent.ExecutionException: java.io.IOException: Unable to write the complete message as the WebSocket connection has been closed
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.startMessageBlock(WsRemoteEndpointImplBase.java:282)
+	at org.apache.tomcat.websocket.WsSession.sendCloseMessage(WsSession.java:584)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:488)
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:455)
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:449)
+	at org.apache.tomcat.websocket.pojo.PojoEndpointBase.handleOnOpenOrCloseError(PojoEndpointBase.java:96)
+	at org.apache.tomcat.websocket.pojo.PojoEndpointBase.doOnOpen(PojoEndpointBase.java:79)
+	at org.apache.tomcat.websocket.pojo.PojoEndpointServer.onOpen(PojoEndpointServer.java:70)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.init(WsHttpUpgradeHandler.java:128)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:707)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.ExecutionException: java.io.IOException: Unable to write the complete message as the WebSocket connection has been closed
+	at org.apache.tomcat.websocket.FutureToSendHandler.get(FutureToSendHandler.java:102)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.startMessageBlock(WsRemoteEndpointImplBase.java:275)
+	... 15 more
+Caused by: java.io.IOException: Unable to write the complete message as the WebSocket connection has been closed
+	at org.apache.tomcat.websocket.WsSession.registerFuture(WsSession.java:658)
+	at org.apache.tomcat.websocket.FutureToSendHandler.get(FutureToSendHandler.java:92)
+	... 16 more
+
+31-Mar-2016 00:12:44.915 INFO [http-nio-8443-exec-10] com.ChatEndpoint.close se fue
+31-Mar-2016 00:13:53.041 INFO [http-apr-8079-exec-19] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 00:13:53.100 INFO [http-apr-8079-exec-19] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 00:13:59.505 INFO [http-apr-8079-exec-15] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 00:13:59.541 INFO [http-apr-8079-exec-15] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 00:14:18.160 INFO [http-apr-8079-exec-21] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 00:14:18.202 INFO [http-apr-8079-exec-21] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 00:14:26.009 INFO [http-nio-8443-exec-3] com.ChatEndpoint.close se fue
+31-Mar-2016 00:14:56.061 INFO [http-apr-8079-exec-22] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 00:14:56.111 INFO [http-apr-8079-exec-22] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 00:14:59.528 INFO [http-nio-8443-exec-3] com.ChatEndpoint.close se fue
+31-Mar-2016 00:15:16.266 INFO [http-apr-8079-exec-15] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 00:15:16.313 INFO [http-apr-8079-exec-15] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 00:15:20.342 INFO [http-nio-8443-exec-5] com.ChatEndpoint.close se fue
+31-Mar-2016 00:15:48.150 INFO [http-apr-8079-exec-21] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 00:15:48.200 INFO [http-apr-8079-exec-21] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 00:15:52.102 INFO [http-nio-8443-exec-15] com.ChatEndpoint.close se fue
+31-Mar-2016 00:16:09.750 INFO [http-apr-8079-exec-15] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 00:16:09.788 INFO [http-apr-8079-exec-15] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 00:16:12.612 INFO [http-nio-8443-exec-9] com.ChatEndpoint.close se fue
+31-Mar-2016 00:16:34.257 INFO [http-apr-8079-exec-25] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 00:16:34.324 INFO [http-apr-8079-exec-25] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 00:16:37.365 INFO [http-nio-8443-exec-9] com.ChatEndpoint.close se fue
+31-Mar-2016 00:17:17.746 INFO [http-apr-8079-exec-21] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 00:17:17.805 INFO [http-apr-8079-exec-21] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 00:17:26.581 INFO [http-apr-8079-exec-28] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 00:17:26.616 INFO [http-apr-8079-exec-28] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 00:17:29.036 INFO [http-nio-8443-exec-9] com.ChatEndpoint.open entra
+31-Mar-2016 00:20:08.218 INFO [http-apr-8079-exec-25] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 00:20:08.222 INFO [http-apr-8079-exec-25] com.ChatEndpoint.close se fue
+31-Mar-2016 00:20:08.280 INFO [http-apr-8079-exec-25] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 00:20:13.482 INFO [http-nio-8443-exec-19] com.ChatEndpoint.open entra
+31-Mar-2016 00:20:22.186 INFO [http-nio-8443-exec-21] com.ChatEndpoint.close se fue
+31-Mar-2016 00:20:23.738 INFO [http-nio-8443-exec-12] com.ChatEndpoint.open entra
+31-Mar-2016 00:26:45.590 INFO [http-apr-8079-exec-28] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 00:26:45.593 INFO [http-apr-8079-exec-28] com.ChatEndpoint.close se fue
+31-Mar-2016 00:26:45.642 INFO [http-apr-8079-exec-28] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 00:31:23.265 INFO [http-apr-8079-exec-21] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 00:31:23.267 INFO [http-apr-8079-exec-21] com.ChatEndpoint.close se fue
+31-Mar-2016 00:31:23.324 INFO [http-apr-8079-exec-21] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 00:37:53.874 INFO [http-nio-8443-exec-46] com.ChatEndpoint.close se fue
+31-Mar-2016 00:38:39.447 INFO [http-nio-8443-exec-41] com.ChatEndpoint.close se fue
+31-Mar-2016 00:38:49.391 INFO [http-nio-8443-exec-46] com.ChatEndpoint.close se fue
+31-Mar-2016 00:42:47.003 INFO [http-apr-8079-exec-55] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 00:42:47.007 INFO [http-apr-8079-exec-55] com.ChatEndpoint.close se fue
+31-Mar-2016 00:42:47.073 INFO [http-apr-8079-exec-55] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 00:43:15.411 INFO [main] org.apache.catalina.core.StandardServer.await Se ha recibido un comando de apagado a través del puerto de apagado. Parando la instancia del Servidor.
+31-Mar-2016 00:43:15.411 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-apr-8079"]
+31-Mar-2016 00:43:15.464 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8443"]
+31-Mar-2016 00:43:15.514 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-apr-8009"]
+31-Mar-2016 00:43:15.565 INFO [main] org.apache.catalina.core.StandardService.stopInternal Parando servicio Catalina
+31-Mar-2016 00:43:15.579 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-apr-8079"]
+31-Mar-2016 00:43:15.630 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8443"]
+31-Mar-2016 00:43:15.632 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-apr-8009"]
+31-Mar-2016 00:43:15.682 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-apr-8079"]
+31-Mar-2016 00:43:15.682 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8443"]
+31-Mar-2016 00:43:15.683 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-apr-8009"]
+31-Mar-2016 11:14:27.437 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.30
+31-Mar-2016 11:14:27.438 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 1 2015 22:30:46 UTC
+31-Mar-2016 11:14:27.438 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.30.0
+31-Mar-2016 11:14:27.438 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+31-Mar-2016 11:14:27.438 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+31-Mar-2016 11:14:27.438 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+31-Mar-2016 11:14:27.438 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_71\jre
+31-Mar-2016 11:14:27.438 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_71-b15
+31-Mar-2016 11:14:27.438 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+31-Mar-2016 11:14:27.438 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\tomcat-ssl
+31-Mar-2016 11:14:27.438 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\tomcat-ssl
+31-Mar-2016 11:14:27.438 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\tomcat-ssl\conf\logging.properties
+31-Mar-2016 11:14:27.439 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+31-Mar-2016 11:14:27.439 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=C:\tomcat-ssl\endorsed
+31-Mar-2016 11:14:27.440 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\tomcat-ssl
+31-Mar-2016 11:14:27.440 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\tomcat-ssl
+31-Mar-2016 11:14:27.440 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\tomcat-ssl\temp
+31-Mar-2016 11:14:27.440 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Cargada la biblioteca nativa APR de Apache Tomcat 1.1.33 con la versión APR 1.5.1.
+31-Mar-2016 11:14:27.440 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Capacidades APR: IPv6 [true], enviar fichero [true], aceptar filtros [false], aleatorio [true].
+31-Mar-2016 11:14:27.989 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL inicializado correctamente (OpenSSL 1.0.1m 19 Mar 2015)
+31-Mar-2016 11:14:28.125 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-apr-8079"]
+31-Mar-2016 11:14:28.144 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8443"]
+31-Mar-2016 11:14:28.405 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+31-Mar-2016 11:14:28.407 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-apr-8009"]
+31-Mar-2016 11:14:28.408 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1289 ms
+31-Mar-2016 11:14:28.445 INFO [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio Catalina
+31-Mar-2016 11:14:28.445 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.30
+31-Mar-2016 11:14:28.452 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración C:\tomcat-ssl\conf\Catalina\localhost\Chat.xml
+31-Mar-2016 11:14:28.735 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Mar-2016 11:14:28.822 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\tomcat-ssl\conf\Catalina\localhost\Chat.xml has finished in 368 ms
+31-Mar-2016 11:14:28.822 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Desplieque del descriptor de configuración C:\tomcat-ssl\conf\Catalina\localhost\ChatSSL.xml
+31-Mar-2016 11:14:28.828 SEVERE [localhost-startStop-1] org.apache.catalina.core.ContainerBase.addChildInternal ContainerBase.addChild: start: 
+ org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/ChatSSL]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:154)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:586)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1777)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@4a31ce53]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:154)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4928)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5058)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 10 more
+Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\ang_2\OneDrive\Documentos\NetBeansProjects\ChatSSL\target\ChatSSL-1.0-SNAPSHOT] is not valid
+	at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:723)
+	at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:684)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 13 more
+
+31-Mar-2016 11:14:28.828 SEVERE [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Error durante el despliegue del descriptor de configuración C:\tomcat-ssl\conf\Catalina\localhost\ChatSSL.xml
+ java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/ChatSSL]]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:729)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:586)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1777)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+31-Mar-2016 11:14:28.829 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\tomcat-ssl\conf\Catalina\localhost\ChatSSL.xml has finished in 7 ms
+31-Mar-2016 11:14:28.829 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\docs de la aplicación web
+31-Mar-2016 11:14:28.884 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Mar-2016 11:14:28.889 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\docs has finished in 60 ms
+31-Mar-2016 11:14:28.889 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\examples de la aplicación web
+31-Mar-2016 11:14:29.633 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Mar-2016 11:14:29.656 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\examples has finished in 767 ms
+31-Mar-2016 11:14:29.656 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\host-manager de la aplicación web
+31-Mar-2016 11:14:29.697 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Mar-2016 11:14:29.700 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\host-manager has finished in 44 ms
+31-Mar-2016 11:14:29.700 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\manager de la aplicación web
+31-Mar-2016 11:14:29.743 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Mar-2016 11:14:29.745 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\manager has finished in 45 ms
+31-Mar-2016 11:14:29.745 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Despliegue del directorio C:\tomcat-ssl\webapps\ROOT de la aplicación web
+31-Mar-2016 11:14:29.787 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+31-Mar-2016 11:14:29.790 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\tomcat-ssl\webapps\ROOT has finished in 45 ms
+31-Mar-2016 11:14:29.793 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-apr-8079"]
+31-Mar-2016 11:14:29.797 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8443"]
+31-Mar-2016 11:14:29.798 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-apr-8009"]
+31-Mar-2016 11:14:29.798 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1391 ms
+31-Mar-2016 11:14:30.452 INFO [http-apr-8079-exec-3] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 11:14:30.506 INFO [http-apr-8079-exec-3] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 11:14:33.746 INFO [http-nio-8443-exec-6] com.ChatEndpoint.open entra
+31-Mar-2016 11:14:41.169 INFO [http-nio-8443-exec-10] com.ChatEndpoint.close se fue
+31-Mar-2016 11:14:43.549 INFO [http-nio-8443-exec-10] com.ChatEndpoint.open entra
+31-Mar-2016 11:21:02.171 INFO [http-apr-8079-exec-9] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 11:21:02.172 SEVERE [http-apr-8079-exec-9] org.apache.tomcat.websocket.pojo.PojoEndpointBase.onError No error handling configured for [com.ChatEndpoint] and the following error occurred
+ java.io.IOException: java.util.concurrent.ExecutionException: java.io.IOException: Unable to write the complete message as the WebSocket connection has been closed
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.startMessageBlock(WsRemoteEndpointImplBase.java:282)
+	at org.apache.tomcat.websocket.WsSession.sendCloseMessage(WsSession.java:584)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:488)
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:455)
+	at org.apache.tomcat.websocket.WsWebSocketContainer.destroy(WsWebSocketContainer.java:929)
+	at org.apache.tomcat.websocket.server.WsServerContainer.destroy(WsServerContainer.java:285)
+	at org.apache.tomcat.websocket.server.WsContextListener.contextDestroyed(WsContextListener.java:48)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4857)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5478)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3824)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:1006)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:614)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:521)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1096)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:674)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2500)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2489)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.util.concurrent.ExecutionException: java.io.IOException: Unable to write the complete message as the WebSocket connection has been closed
+	at org.apache.tomcat.websocket.FutureToSendHandler.get(FutureToSendHandler.java:102)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.startMessageBlock(WsRemoteEndpointImplBase.java:275)
+	... 38 more
+Caused by: java.io.IOException: Unable to write the complete message as the WebSocket connection has been closed
+	at org.apache.tomcat.websocket.WsSession.registerFuture(WsSession.java:658)
+	at org.apache.tomcat.websocket.FutureToSendHandler.get(FutureToSendHandler.java:92)
+	... 39 more
+
+31-Mar-2016 11:21:02.318 INFO [http-apr-8079-exec-9] com.ChatEndpoint.close se fue
+31-Mar-2016 11:21:02.400 INFO [http-apr-8079-exec-9] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 11:21:20.617 INFO [http-nio-8443-exec-5] com.ChatEndpoint.open entra
+31-Mar-2016 11:22:00.234 INFO [http-nio-8443-exec-5] com.ChatEndpoint.open entra
+31-Mar-2016 11:24:57.642 INFO [http-nio-8443-exec-5] com.ChatEndpoint.close se fue
+31-Mar-2016 11:24:57.642 INFO [http-nio-8443-exec-8] com.ChatEndpoint.close se fue
+31-Mar-2016 11:25:00.399 INFO [http-nio-8443-exec-13] com.ChatEndpoint.open entra
+31-Mar-2016 11:28:17.295 INFO [http-nio-8443-exec-12] com.ChatEndpoint.close se fue
+31-Mar-2016 11:28:19.292 INFO [http-nio-8443-exec-14] com.ChatEndpoint.open entra
+31-Mar-2016 11:29:11.307 INFO [http-nio-8443-exec-18] com.ChatEndpoint.close se fue
+31-Mar-2016 11:29:13.241 INFO [http-nio-8443-exec-14] com.ChatEndpoint.open entra
+31-Mar-2016 11:30:34.844 INFO [http-apr-8079-exec-27] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 11:30:34.847 INFO [http-apr-8079-exec-27] com.ChatEndpoint.close se fue
+31-Mar-2016 11:30:34.900 INFO [http-apr-8079-exec-27] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 11:30:52.613 INFO [http-apr-8079-exec-29] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 11:30:52.658 INFO [http-apr-8079-exec-29] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 11:30:54.322 INFO [http-apr-8079-exec-30] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 11:30:54.360 INFO [http-apr-8079-exec-30] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 11:37:21.158 INFO [http-apr-8079-exec-25] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 11:37:21.202 INFO [http-apr-8079-exec-25] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 11:37:27.814 INFO [http-apr-8079-exec-22] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 11:37:27.845 INFO [http-apr-8079-exec-22] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 11:38:01.870 INFO [http-apr-8079-exec-34] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 11:38:01.917 INFO [http-apr-8079-exec-34] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 11:40:41.872 INFO [http-apr-8079-exec-22] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 11:40:41.933 INFO [http-apr-8079-exec-22] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 11:40:48.193 INFO [http-nio-8443-exec-25] com.ChatEndpoint.open entra
+31-Mar-2016 11:40:48.208 INFO [http-nio-8443-exec-26] com.ChatEndpoint.close se fue
+31-Mar-2016 11:41:28.552 INFO [http-apr-8079-exec-41] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 11:41:28.607 INFO [http-apr-8079-exec-41] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 11:41:32.246 INFO [http-nio-8443-exec-29] com.ChatEndpoint.open entra
+31-Mar-2016 11:41:32.250 INFO [http-nio-8443-exec-30] com.ChatEndpoint.close se fue
+31-Mar-2016 11:46:04.042 INFO [http-apr-8079-exec-35] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 11:46:04.145 INFO [http-apr-8079-exec-35] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 11:46:04.721 INFO [http-apr-8079-exec-49] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 11:46:04.753 INFO [http-apr-8079-exec-49] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 11:46:42.850 INFO [http-apr-8079-exec-36] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 11:46:42.917 INFO [http-apr-8079-exec-36] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 11:46:50.139 INFO [http-nio-8443-exec-32] com.ChatEndpoint.open entra
+31-Mar-2016 11:47:07.404 INFO [http-apr-8079-exec-22] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 11:47:07.408 INFO [http-apr-8079-exec-22] com.ChatEndpoint.close se fue
+31-Mar-2016 11:47:07.442 INFO [http-apr-8079-exec-22] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 11:47:42.039 INFO [http-apr-8079-exec-36] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 11:47:42.099 INFO [http-apr-8079-exec-36] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 11:47:51.546 INFO [http-nio-8443-exec-41] com.ChatEndpoint.open entra
+31-Mar-2016 11:48:23.349 INFO [http-apr-8079-exec-22] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 11:48:23.351 INFO [http-apr-8079-exec-22] com.ChatEndpoint.close se fue
+31-Mar-2016 11:48:23.401 INFO [http-apr-8079-exec-22] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 12:01:56.363 INFO [http-apr-8079-exec-63] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 12:01:56.446 INFO [http-apr-8079-exec-63] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 12:02:04.059 INFO [http-nio-8443-exec-48] com.ChatEndpoint.open entra
+31-Mar-2016 12:24:08.689 INFO [http-nio-8443-exec-61] com.ChatEndpoint.close se fue
+31-Mar-2016 12:24:11.015 INFO [http-nio-8443-exec-62] com.ChatEndpoint.open entra
+31-Mar-2016 12:26:42.487 INFO [http-nio-8443-exec-57] com.ChatEndpoint.close se fue
+31-Mar-2016 12:26:44.902 INFO [http-nio-8443-exec-57] com.ChatEndpoint.open entra
+31-Mar-2016 12:27:09.606 INFO [http-nio-8443-exec-60] com.ChatEndpoint.close se fue
+31-Mar-2016 12:27:11.831 INFO [http-nio-8443-exec-63] com.ChatEndpoint.open entra
+31-Mar-2016 12:27:32.906 INFO [http-nio-8443-exec-56] com.ChatEndpoint.close se fue
+31-Mar-2016 12:27:34.580 INFO [http-nio-8443-exec-59] com.ChatEndpoint.open entra
+31-Mar-2016 12:28:12.092 INFO [http-nio-8443-exec-65] com.ChatEndpoint.close se fue
+31-Mar-2016 12:28:13.818 INFO [http-nio-8443-exec-62] com.ChatEndpoint.open entra
+31-Mar-2016 12:34:55.092 INFO [http-nio-8443-exec-62] com.ChatEndpoint.close se fue
+31-Mar-2016 12:34:57.100 INFO [http-nio-8443-exec-63] com.ChatEndpoint.open entra
+31-Mar-2016 12:37:24.835 INFO [http-nio-8443-exec-64] com.ChatEndpoint.close se fue
+31-Mar-2016 12:37:27.754 INFO [http-nio-8443-exec-65] com.ChatEndpoint.open entra
+31-Mar-2016 12:38:53.499 INFO [http-nio-8443-exec-65] com.ChatEndpoint.close se fue
+31-Mar-2016 12:38:56.426 INFO [http-nio-8443-exec-62] com.ChatEndpoint.open entra
+31-Mar-2016 12:39:13.889 INFO [http-nio-8443-exec-59] com.ChatEndpoint.close se fue
+31-Mar-2016 12:39:15.972 INFO [http-nio-8443-exec-60] com.ChatEndpoint.open entra
+31-Mar-2016 12:44:48.728 INFO [http-apr-8079-exec-70] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 12:44:48.730 INFO [http-apr-8079-exec-70] com.ChatEndpoint.close se fue
+31-Mar-2016 12:44:48.780 INFO [http-apr-8079-exec-70] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 12:46:43.808 INFO [http-nio-8443-exec-67] com.ChatEndpoint.open entra
+31-Mar-2016 15:22:46.486 INFO [http-apr-8079-exec-83] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 15:22:46.488 INFO [http-apr-8079-exec-83] com.ChatEndpoint.close se fue
+31-Mar-2016 15:22:46.533 INFO [http-apr-8079-exec-83] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 15:22:52.042 INFO [http-apr-8079-exec-76] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 15:22:52.100 INFO [http-apr-8079-exec-76] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 15:22:53.618 INFO [http-apr-8079-exec-78] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 15:22:53.652 INFO [http-apr-8079-exec-78] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 15:23:02.244 INFO [http-apr-8079-exec-76] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 15:23:02.290 INFO [http-apr-8079-exec-76] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 15:23:28.928 INFO [http-apr-8079-exec-88] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 15:23:28.974 INFO [http-apr-8079-exec-88] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 15:23:33.692 INFO [http-apr-8079-exec-88] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 15:23:33.724 INFO [http-apr-8079-exec-88] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 15:24:39.034 INFO [http-apr-8079-exec-76] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 15:24:39.094 INFO [http-apr-8079-exec-76] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 15:25:07.901 INFO [http-apr-8079-exec-88] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 15:25:07.936 INFO [http-apr-8079-exec-88] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 15:28:54.794 INFO [http-apr-8079-exec-93] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 15:28:54.854 INFO [http-apr-8079-exec-93] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 15:30:20.113 INFO [http-apr-8079-exec-88] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 15:30:20.164 INFO [http-apr-8079-exec-88] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 15:32:50.404 INFO [http-apr-8079-exec-93] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 15:32:50.463 INFO [http-apr-8079-exec-93] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 15:34:02.537 INFO [http-apr-8079-exec-100] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 15:34:02.601 INFO [http-apr-8079-exec-100] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 15:34:14.722 INFO [http-nio-8443-exec-73] com.ChatEndpoint.open entra
+31-Mar-2016 15:35:31.931 INFO [http-nio-8443-exec-82] com.ChatEndpoint.close se fue
+31-Mar-2016 15:35:34.196 INFO [http-nio-8443-exec-73] com.ChatEndpoint.open entra
+31-Mar-2016 15:35:45.714 INFO [http-nio-8443-exec-88] com.ChatEndpoint.open entra
+31-Mar-2016 15:36:29.524 INFO [http-apr-8079-exec-93] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 15:36:29.527 INFO [http-apr-8079-exec-93] com.ChatEndpoint.close se fue
+31-Mar-2016 15:36:29.529 INFO [http-apr-8079-exec-93] com.ChatEndpoint.close se fue
+31-Mar-2016 15:36:29.573 INFO [http-apr-8079-exec-93] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 15:36:36.483 INFO [http-nio-8443-exec-85] com.ChatEndpoint.open entra
+31-Mar-2016 15:36:45.811 INFO [http-nio-8443-exec-93] com.ChatEndpoint.open entra
+31-Mar-2016 15:38:35.664 INFO [http-apr-8079-exec-100] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 15:38:35.666 INFO [http-apr-8079-exec-100] com.ChatEndpoint.close se fue
+31-Mar-2016 15:38:35.667 INFO [http-apr-8079-exec-100] com.ChatEndpoint.close se fue
+31-Mar-2016 15:38:35.712 INFO [http-apr-8079-exec-100] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 15:39:12.062 INFO [http-apr-8079-exec-104] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 15:39:12.120 INFO [http-apr-8079-exec-104] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 15:39:17.434 INFO [http-nio-8443-exec-97] com.ChatEndpoint.open entra
+31-Mar-2016 15:39:17.439 INFO [http-nio-8443-exec-99] com.ChatEndpoint.close se fue
+31-Mar-2016 15:39:20.135 INFO [http-nio-8443-exec-96] com.ChatEndpoint.open entra
+31-Mar-2016 15:39:20.137 INFO [http-nio-8443-exec-97] com.ChatEndpoint.close se fue
+31-Mar-2016 15:40:12.080 INFO [http-apr-8079-exec-93] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 15:40:12.137 INFO [http-apr-8079-exec-93] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 15:40:44.933 INFO [http-apr-8079-exec-100] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 15:40:44.990 INFO [http-apr-8079-exec-100] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 15:40:53.949 INFO [http-apr-8079-exec-93] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 15:40:54.010 INFO [http-apr-8079-exec-93] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 15:40:59.334 INFO [http-nio-8443-exec-100] com.ChatEndpoint.open entra
+31-Mar-2016 15:40:59.339 INFO [http-nio-8443-exec-85] com.ChatEndpoint.close se fue
+31-Mar-2016 15:41:01.604 INFO [http-nio-8443-exec-102] com.ChatEndpoint.open entra
+31-Mar-2016 15:41:01.606 INFO [http-nio-8443-exec-100] com.ChatEndpoint.close se fue
+31-Mar-2016 15:41:47.366 INFO [http-nio-8443-exec-104] com.ChatEndpoint.open entra
+31-Mar-2016 15:41:47.368 INFO [http-nio-8443-exec-97] com.ChatEndpoint.close se fue
+31-Mar-2016 15:43:18.431 INFO [http-apr-8079-exec-100] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 15:43:18.490 INFO [http-apr-8079-exec-100] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 15:43:22.097 INFO [http-nio-8443-exec-105] com.ChatEndpoint.open entra
+31-Mar-2016 15:43:22.104 INFO [http-nio-8443-exec-96] com.ChatEndpoint.close se fue
+31-Mar-2016 15:43:57.970 INFO [http-apr-8079-exec-104] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 15:43:58.017 INFO [http-apr-8079-exec-104] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 15:44:01.868 INFO [http-nio-8443-exec-96] com.ChatEndpoint.open entra
+31-Mar-2016 15:44:37.479 INFO [http-nio-8443-exec-102] com.ChatEndpoint.open entra
+31-Mar-2016 15:48:16.036 INFO [http-nio-8443-exec-117] com.ChatEndpoint.close se fue
+31-Mar-2016 15:49:17.539 INFO [http-nio-8443-exec-118] com.ChatEndpoint.open entra
+31-Mar-2016 15:49:40.776 INFO [http-nio-8443-exec-118] com.ChatEndpoint.close se fue
+31-Mar-2016 15:51:48.109 INFO [http-nio-8443-exec-113] com.ChatEndpoint.open entra
+31-Mar-2016 15:51:51.965 INFO [http-nio-8443-exec-112] com.ChatEndpoint.close se fue
+31-Mar-2016 15:51:56.448 INFO [http-nio-8443-exec-115] com.ChatEndpoint.open entra
+31-Mar-2016 15:52:01.519 INFO [http-nio-8443-exec-116] com.ChatEndpoint.close se fue
+31-Mar-2016 15:52:01.903 INFO [http-nio-8443-exec-114] com.ChatEndpoint.close se fue
+31-Mar-2016 15:52:10.266 INFO [http-nio-8443-exec-112] com.ChatEndpoint.open entra
+31-Mar-2016 15:52:15.940 INFO [http-nio-8443-exec-114] com.ChatEndpoint.open entra
+31-Mar-2016 15:55:52.118 INFO [http-nio-8443-exec-114] com.ChatEndpoint.close se fue
+31-Mar-2016 15:55:55.345 INFO [http-nio-8443-exec-112] com.ChatEndpoint.open entra
+31-Mar-2016 15:57:09.787 INFO [http-nio-8443-exec-112] com.ChatEndpoint.close se fue
+31-Mar-2016 15:58:12.494 INFO [http-nio-8443-exec-112] com.ChatEndpoint.open entra
+31-Mar-2016 15:59:20.276 INFO [http-nio-8443-exec-112] com.ChatEndpoint.close se fue
+31-Mar-2016 15:59:23.058 INFO [http-nio-8443-exec-112] com.ChatEndpoint.open entra
+31-Mar-2016 16:05:04.518 INFO [http-nio-8443-exec-110] com.ChatEndpoint.open entra
+31-Mar-2016 16:06:52.641 INFO [http-nio-8443-exec-115] com.ChatEndpoint.close se fue
+31-Mar-2016 16:06:55.300 INFO [http-nio-8443-exec-115] com.ChatEndpoint.open entra
+31-Mar-2016 16:06:59.617 INFO [http-nio-8443-exec-114] com.ChatEndpoint.close se fue
+31-Mar-2016 16:07:02.118 INFO [http-nio-8443-exec-118] com.ChatEndpoint.open entra
+31-Mar-2016 16:09:48.429 INFO [http-nio-8443-exec-110] com.ChatEndpoint.close se fue
+31-Mar-2016 16:09:53.033 INFO [http-nio-8443-exec-114] com.ChatEndpoint.open entra
+31-Mar-2016 16:09:53.034 INFO [http-nio-8443-exec-111] com.ChatEndpoint.close se fue
+31-Mar-2016 16:10:08.457 INFO [http-nio-8443-exec-112] com.ChatEndpoint.open entra
+31-Mar-2016 16:10:08.458 INFO [http-nio-8443-exec-113] com.ChatEndpoint.close se fue
+31-Mar-2016 16:10:16.259 INFO [http-nio-8443-exec-118] com.ChatEndpoint.close se fue
+31-Mar-2016 16:10:16.743 INFO [http-nio-8443-exec-116] com.ChatEndpoint.close se fue
+31-Mar-2016 16:10:28.628 INFO [http-nio-8443-exec-118] com.ChatEndpoint.open entra
+31-Mar-2016 16:10:28.629 INFO [http-nio-8443-exec-112] com.ChatEndpoint.close se fue
+31-Mar-2016 16:10:37.240 INFO [http-nio-8443-exec-115] com.ChatEndpoint.open entra
+31-Mar-2016 16:10:37.242 INFO [http-nio-8443-exec-116] com.ChatEndpoint.close se fue
+31-Mar-2016 16:10:43.928 INFO [http-apr-8079-exec-119] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 16:10:43.972 INFO [http-apr-8079-exec-119] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 16:10:54.287 INFO [http-nio-8443-exec-118] com.ChatEndpoint.open entra
+31-Mar-2016 16:11:06.400 INFO [http-nio-8443-exec-121] com.ChatEndpoint.open entra
+31-Mar-2016 16:11:06.402 INFO [http-nio-8443-exec-118] com.ChatEndpoint.close se fue
+31-Mar-2016 16:11:15.511 INFO [http-nio-8443-exec-120] com.ChatEndpoint.close se fue
+31-Mar-2016 16:11:26.472 INFO [http-nio-8443-exec-120] com.ChatEndpoint.open entra
+31-Mar-2016 16:11:26.473 INFO [http-nio-8443-exec-122] com.ChatEndpoint.close se fue
+31-Mar-2016 16:12:13.754 INFO [http-apr-8079-exec-121] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 16:12:13.799 INFO [http-apr-8079-exec-121] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 16:12:19.360 INFO [http-nio-8443-exec-112] com.ChatEndpoint.open entra
+31-Mar-2016 16:12:19.366 INFO [http-nio-8443-exec-124] com.ChatEndpoint.close se fue null
+31-Mar-2016 16:12:54.612 INFO [http-apr-8079-exec-129] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 16:12:54.666 INFO [http-apr-8079-exec-129] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 16:12:58.781 INFO [http-nio-8443-exec-112] com.ChatEndpoint.open entra
+31-Mar-2016 16:12:58.786 INFO [http-nio-8443-exec-125] com.ChatEndpoint.close se fue null
+31-Mar-2016 16:13:17.648 INFO [http-apr-8079-exec-125] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 16:13:17.690 INFO [http-apr-8079-exec-125] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 16:13:21.898 INFO [http-nio-8443-exec-131] com.ChatEndpoint.open entra
+31-Mar-2016 16:13:21.903 INFO [http-nio-8443-exec-123] com.ChatEndpoint.close se fue null
+31-Mar-2016 16:13:29.766 INFO [http-nio-8443-exec-111] com.ChatEndpoint.open entra
+31-Mar-2016 16:13:40.834 INFO [http-nio-8443-exec-134] com.ChatEndpoint.close se fue asd
+31-Mar-2016 16:13:48.115 INFO [http-apr-8079-exec-129] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 16:13:48.173 INFO [http-apr-8079-exec-129] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 16:17:43.995 INFO [http-apr-8079-exec-125] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 16:17:44.044 INFO [http-apr-8079-exec-125] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 16:17:50.450 INFO [http-nio-8443-exec-135] com.ChatEndpoint.open entra
+31-Mar-2016 16:17:50.455 INFO [http-nio-8443-exec-137] com.ChatEndpoint.close se fue null
+31-Mar-2016 16:19:13.124 INFO [http-apr-8079-exec-135] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 16:19:13.168 INFO [http-apr-8079-exec-135] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 16:19:16.074 INFO [http-nio-8443-exec-142] com.ChatEndpoint.open entra
+31-Mar-2016 16:19:16.079 INFO [http-nio-8443-exec-135] com.ChatEndpoint.close se fue null
+31-Mar-2016 16:20:06.058 INFO [http-apr-8079-exec-125] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 16:20:06.118 INFO [http-apr-8079-exec-125] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 16:20:09.056 INFO [http-nio-8443-exec-111] com.ChatEndpoint.open entra
+31-Mar-2016 16:20:09.061 INFO [http-nio-8443-exec-135] com.ChatEndpoint.close se fue null
+31-Mar-2016 16:20:21.496 INFO [http-apr-8079-exec-135] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 16:20:21.543 INFO [http-apr-8079-exec-135] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 16:20:25.005 INFO [http-nio-8443-exec-111] com.ChatEndpoint.open entra
+31-Mar-2016 16:20:25.010 INFO [http-nio-8443-exec-131] com.ChatEndpoint.close se fue null
+31-Mar-2016 16:24:09.796 INFO [http-apr-8079-exec-125] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 16:24:09.861 INFO [http-apr-8079-exec-125] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 16:24:15.625 INFO [http-apr-8079-exec-144] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 16:24:15.661 INFO [http-apr-8079-exec-144] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 16:24:20.752 INFO [http-nio-8443-exec-149] com.ChatEndpoint.open entra
+31-Mar-2016 16:24:20.759 INFO [http-nio-8443-exec-131] com.ChatEndpoint.close se fue null
+31-Mar-2016 16:26:40.125 INFO [http-apr-8079-exec-135] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 16:26:40.175 INFO [http-apr-8079-exec-135] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 16:26:48.821 INFO [http-nio-8443-exec-151] com.ChatEndpoint.open entra
+31-Mar-2016 16:26:48.827 INFO [http-nio-8443-exec-131] com.ChatEndpoint.close se fue null
+31-Mar-2016 16:31:03.046 INFO [http-apr-8079-exec-150] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 16:31:03.117 INFO [http-apr-8079-exec-150] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 16:32:17.915 INFO [http-nio-8443-exec-158] com.ChatEndpoint.open entra
+31-Mar-2016 16:32:17.922 INFO [http-nio-8443-exec-151] com.ChatEndpoint.close se fue null
+31-Mar-2016 16:32:19.974 INFO [http-nio-8443-exec-149] com.ChatEndpoint.open entra
+31-Mar-2016 16:32:19.975 INFO [http-nio-8443-exec-158] com.ChatEndpoint.close se fue null
+31-Mar-2016 16:32:20.374 INFO [http-nio-8443-exec-161] com.ChatEndpoint.open entra
+31-Mar-2016 16:32:20.375 INFO [http-nio-8443-exec-149] com.ChatEndpoint.close se fue null
+31-Mar-2016 16:32:21.448 INFO [http-nio-8443-exec-163] com.ChatEndpoint.open entra
+31-Mar-2016 16:32:21.449 INFO [http-nio-8443-exec-161] com.ChatEndpoint.close se fue null
+31-Mar-2016 16:32:21.853 INFO [http-nio-8443-exec-165] com.ChatEndpoint.open entra
+31-Mar-2016 16:32:21.854 INFO [http-nio-8443-exec-163] com.ChatEndpoint.close se fue null
+31-Mar-2016 16:32:22.018 INFO [http-nio-8443-exec-162] com.ChatEndpoint.open entra
+31-Mar-2016 16:32:22.019 INFO [http-nio-8443-exec-165] com.ChatEndpoint.close se fue null
+31-Mar-2016 16:32:22.161 INFO [http-nio-8443-exec-167] com.ChatEndpoint.open entra
+31-Mar-2016 16:32:22.164 INFO [http-nio-8443-exec-162] com.ChatEndpoint.close se fue null
+31-Mar-2016 16:32:22.295 INFO [http-nio-8443-exec-166] com.ChatEndpoint.open entra
+31-Mar-2016 16:32:22.298 INFO [http-nio-8443-exec-167] com.ChatEndpoint.close se fue null
+31-Mar-2016 16:32:59.929 INFO [http-apr-8079-exec-144] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 16:33:00.000 INFO [http-apr-8079-exec-144] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 16:33:18.089 INFO [http-nio-8443-exec-167] com.ChatEndpoint.open entra
+31-Mar-2016 16:33:18.101 INFO [http-nio-8443-exec-163] com.ChatEndpoint.close se fue null
+31-Mar-2016 16:33:18.217 INFO [http-nio-8443-exec-164] com.ChatEndpoint.open entra
+31-Mar-2016 16:33:18.219 INFO [http-nio-8443-exec-164] com.ChatEndpoint.close se fue null
+31-Mar-2016 16:33:18.350 INFO [http-nio-8443-exec-161] com.ChatEndpoint.open entra
+31-Mar-2016 16:33:18.352 INFO [http-nio-8443-exec-167] com.ChatEndpoint.close se fue null
+31-Mar-2016 16:33:18.473 INFO [http-nio-8443-exec-166] com.ChatEndpoint.open entra
+31-Mar-2016 16:33:18.474 INFO [http-nio-8443-exec-161] com.ChatEndpoint.close se fue null
+31-Mar-2016 16:33:18.612 INFO [http-nio-8443-exec-151] com.ChatEndpoint.open entra
+31-Mar-2016 16:33:18.613 INFO [http-nio-8443-exec-166] com.ChatEndpoint.close se fue null
+31-Mar-2016 16:33:46.531 INFO [http-nio-8443-exec-169] com.ChatEndpoint.open entra
+31-Mar-2016 16:33:52.559 INFO [http-nio-8443-exec-169] com.ChatEndpoint.close se fue asd
+31-Mar-2016 16:33:55.064 INFO [http-nio-8443-exec-172] com.ChatEndpoint.open entra
+31-Mar-2016 16:34:09.492 INFO [http-nio-8443-exec-175] com.ChatEndpoint.open entra
+31-Mar-2016 16:34:09.495 INFO [http-nio-8443-exec-149] com.ChatEndpoint.close se fue null
+31-Mar-2016 16:34:13.735 INFO [http-nio-8443-exec-172] com.ChatEndpoint.open entra
+31-Mar-2016 16:34:17.958 INFO [http-nio-8443-exec-164] com.ChatEndpoint.open entra
+31-Mar-2016 16:40:52.973 INFO [http-nio-8443-exec-180] com.ChatEndpoint.close se fue asd
+31-Mar-2016 16:40:55.740 INFO [http-nio-8443-exec-176] com.ChatEndpoint.open entra
+31-Mar-2016 16:45:32.273 INFO [http-nio-8443-exec-176] com.ChatEndpoint.close se fue asd
+31-Mar-2016 16:45:34.793 INFO [http-nio-8443-exec-170] com.ChatEndpoint.open entra
+31-Mar-2016 16:48:09.193 INFO [http-nio-8443-exec-178] com.ChatEndpoint.close se fue asd
+31-Mar-2016 16:56:07.233 INFO [http-nio-8443-exec-178] com.ChatEndpoint.open entra
+31-Mar-2016 16:56:07.235 INFO [http-nio-8443-exec-177] com.ChatEndpoint.close se fue null
+31-Mar-2016 16:56:09.975 INFO [http-nio-8443-exec-173] com.ChatEndpoint.open entra
+31-Mar-2016 16:56:48.582 INFO [http-nio-8443-exec-173] com.ChatEndpoint.close se fue asd
+31-Mar-2016 16:56:50.966 INFO [http-nio-8443-exec-170] com.ChatEndpoint.open entra
+31-Mar-2016 16:56:56.805 INFO [http-nio-8443-exec-173] com.ChatEndpoint.close se fue asd
+31-Mar-2016 16:56:58.171 INFO [http-nio-8443-exec-170] com.ChatEndpoint.open entra
+31-Mar-2016 16:57:00.709 INFO [http-nio-8443-exec-180] com.ChatEndpoint.close se fue asd
+31-Mar-2016 16:57:01.342 INFO [http-nio-8443-exec-178] com.ChatEndpoint.open entra
+31-Mar-2016 16:57:02.005 INFO [http-nio-8443-exec-180] com.ChatEndpoint.close se fue asd
+31-Mar-2016 16:57:02.680 INFO [http-nio-8443-exec-178] com.ChatEndpoint.open entra
+31-Mar-2016 16:57:03.507 INFO [http-nio-8443-exec-180] com.ChatEndpoint.close se fue asd
+31-Mar-2016 16:57:08.766 INFO [http-nio-8443-exec-178] com.ChatEndpoint.open entra
+31-Mar-2016 17:01:01.444 INFO [http-nio-8443-exec-178] com.ChatEndpoint.close se fue asd
+31-Mar-2016 17:01:04.463 INFO [http-nio-8443-exec-170] com.ChatEndpoint.open entra
+31-Mar-2016 17:01:37.941 INFO [http-nio-8443-exec-179] com.ChatEndpoint.close se fue asd
+31-Mar-2016 17:01:40.021 INFO [http-nio-8443-exec-172] com.ChatEndpoint.open entra
+31-Mar-2016 17:02:05.293 INFO [http-nio-8443-exec-178] com.ChatEndpoint.close se fue asd
+31-Mar-2016 17:02:07.401 INFO [http-nio-8443-exec-178] com.ChatEndpoint.open entra
+31-Mar-2016 17:05:43.994 INFO [http-nio-8443-exec-179] com.ChatEndpoint.close se fue asd
+31-Mar-2016 17:06:07.725 INFO [http-nio-8443-exec-178] com.ChatEndpoint.open entra
+31-Mar-2016 17:06:27.709 INFO [http-nio-8443-exec-179] com.ChatEndpoint.close se fue asd
+31-Mar-2016 17:06:29.950 INFO [http-nio-8443-exec-172] com.ChatEndpoint.open entra
+31-Mar-2016 17:06:32.220 INFO [http-nio-8443-exec-175] com.ChatEndpoint.close se fue axd
+31-Mar-2016 17:07:02.971 INFO [http-nio-8443-exec-176] com.ChatEndpoint.open entra
+31-Mar-2016 17:07:02.973 INFO [http-nio-8443-exec-175] com.ChatEndpoint.close se fue null
+31-Mar-2016 17:07:05.393 INFO [http-nio-8443-exec-180] com.ChatEndpoint.open entra
+31-Mar-2016 17:07:50.103 INFO [http-nio-8443-exec-171] com.ChatEndpoint.close se fue asd
+31-Mar-2016 17:07:54.954 INFO [http-nio-8443-exec-177] com.ChatEndpoint.open entra
+31-Mar-2016 17:11:31.138 INFO [http-nio-8443-exec-177] com.ChatEndpoint.close se fue asd
+31-Mar-2016 17:11:35.316 INFO [http-nio-8443-exec-171] com.ChatEndpoint.open entra
+31-Mar-2016 17:12:32.609 INFO [http-nio-8443-exec-171] com.ChatEndpoint.close se fue asd
+31-Mar-2016 17:12:53.112 INFO [http-nio-8443-exec-176] com.ChatEndpoint.open entra
+31-Mar-2016 17:13:46.919 INFO [http-nio-8443-exec-172] com.ChatEndpoint.close se fue asd
+31-Mar-2016 17:14:52.613 INFO [http-nio-8443-exec-177] com.ChatEndpoint.open entra
+31-Mar-2016 17:15:32.612 INFO [http-nio-8443-exec-170] com.ChatEndpoint.close se fue asd
+31-Mar-2016 17:16:54.081 INFO [http-nio-8443-exec-175] com.ChatEndpoint.open entra
+31-Mar-2016 17:17:10.171 INFO [http-nio-8443-exec-175] com.ChatEndpoint.close se fue asd
+31-Mar-2016 17:17:11.992 INFO [http-nio-8443-exec-171] com.ChatEndpoint.open entra
+31-Mar-2016 17:17:47.899 INFO [http-nio-8443-exec-180] com.ChatEndpoint.close se fue asd
+31-Mar-2016 17:18:28.553 INFO [http-nio-8443-exec-176] com.ChatEndpoint.open entra
+31-Mar-2016 17:19:07.657 INFO [http-nio-8443-exec-171] com.ChatEndpoint.close se fue asd
+31-Mar-2016 17:19:09.430 INFO [http-nio-8443-exec-178] com.ChatEndpoint.open entra
+31-Mar-2016 17:19:09.432 INFO [http-nio-8443-exec-175] com.ChatEndpoint.close se fue null
+31-Mar-2016 17:19:12.039 INFO [http-nio-8443-exec-170] com.ChatEndpoint.open entra
+31-Mar-2016 17:19:12.040 INFO [http-nio-8443-exec-178] com.ChatEndpoint.close se fue null
+31-Mar-2016 17:19:14.934 INFO [http-nio-8443-exec-171] com.ChatEndpoint.open entra
+31-Mar-2016 17:20:41.411 INFO [http-nio-8443-exec-171] com.ChatEndpoint.close se fue asda
+31-Mar-2016 17:20:43.270 INFO [http-nio-8443-exec-180] com.ChatEndpoint.open entra
+31-Mar-2016 17:20:43.272 INFO [http-nio-8443-exec-179] com.ChatEndpoint.close se fue null
+31-Mar-2016 17:20:45.653 INFO [http-nio-8443-exec-175] com.ChatEndpoint.open entra
+31-Mar-2016 17:23:50.244 INFO [http-nio-8443-exec-180] com.ChatEndpoint.close se fue asd
+31-Mar-2016 17:23:52.821 INFO [http-nio-8443-exec-173] com.ChatEndpoint.open entra
+31-Mar-2016 17:23:58.949 INFO [http-nio-8443-exec-177] com.ChatEndpoint.close se fue q
+31-Mar-2016 17:25:02.348 INFO [http-apr-8079-exec-166] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 17:25:02.351 INFO [http-apr-8079-exec-166] com.ChatEndpoint.close se fue sdad
+31-Mar-2016 17:25:02.351 INFO [http-apr-8079-exec-166] com.ChatEndpoint.close se fue sda
+31-Mar-2016 17:25:02.401 INFO [http-apr-8079-exec-166] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 17:25:05.593 INFO [http-nio-8443-exec-178] com.ChatEndpoint.open entra
+31-Mar-2016 17:25:13.297 INFO [http-nio-8443-exec-172] com.ChatEndpoint.open entra
+31-Mar-2016 17:25:19.490 INFO [http-nio-8443-exec-184] com.ChatEndpoint.close se fue asd
+31-Mar-2016 17:26:04.567 INFO [http-apr-8079-exec-162] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 17:26:04.570 INFO [http-apr-8079-exec-162] com.ChatEndpoint.close se fue q
+31-Mar-2016 17:26:04.625 INFO [http-apr-8079-exec-162] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 17:26:10.856 INFO [http-nio-8443-exec-185] com.ChatEndpoint.open entra
+31-Mar-2016 17:26:13.006 INFO [http-nio-8443-exec-181] com.ChatEndpoint.open entra
+31-Mar-2016 17:26:23.236 INFO [461] com.ChatEndpoint.close se fue dsa
+31-Mar-2016 17:27:02.304 INFO [http-apr-8079-exec-168] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 17:27:02.308 INFO [http-apr-8079-exec-168] com.ChatEndpoint.close se fue asd
+31-Mar-2016 17:27:02.362 INFO [http-apr-8079-exec-168] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 17:27:06.112 INFO [http-nio-8443-exec-185] com.ChatEndpoint.open entra
+31-Mar-2016 17:27:09.025 INFO [http-nio-8443-exec-183] com.ChatEndpoint.open entra
+31-Mar-2016 17:27:11.611 INFO [499] com.ChatEndpoint.close se fue dsa
+31-Mar-2016 17:28:24.970 INFO [http-apr-8079-exec-162] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 17:28:24.972 INFO [http-apr-8079-exec-162] com.ChatEndpoint.close se fue asd
+31-Mar-2016 17:28:25.015 INFO [http-apr-8079-exec-162] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 17:28:35.602 INFO [http-apr-8079-exec-169] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 17:28:35.633 INFO [http-apr-8079-exec-169] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 17:28:43.958 INFO [http-nio-8443-exec-185] com.ChatEndpoint.open entra
+31-Mar-2016 17:28:46.541 INFO [http-nio-8443-exec-187] com.ChatEndpoint.open entra
+31-Mar-2016 17:28:48.869 INFO [http-nio-8443-exec-180] com.ChatEndpoint.close se fue dsa
+31-Mar-2016 17:30:15.986 INFO [http-nio-8443-exec-187] com.ChatEndpoint.close se fue asd
+31-Mar-2016 17:30:19.789 INFO [http-nio-8443-exec-185] com.ChatEndpoint.open entra
+31-Mar-2016 17:30:21.324 INFO [http-nio-8443-exec-202] com.ChatEndpoint.open entra
+31-Mar-2016 17:30:24.726 INFO [http-nio-8443-exec-190] com.ChatEndpoint.close se fue dsa
+31-Mar-2016 17:30:39.085 INFO [http-nio-8443-exec-198] com.ChatEndpoint.close se fue asd
+31-Mar-2016 17:30:41.242 INFO [http-nio-8443-exec-204] com.ChatEndpoint.open entra
+31-Mar-2016 17:30:42.730 INFO [http-nio-8443-exec-202] com.ChatEndpoint.open entra
+31-Mar-2016 17:31:42.252 INFO [http-apr-8079-exec-173] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 17:31:42.254 INFO [http-apr-8079-exec-173] com.ChatEndpoint.close se fue asd
+31-Mar-2016 17:31:42.254 INFO [http-apr-8079-exec-173] com.ChatEndpoint.close se fue dsa
+31-Mar-2016 17:31:42.302 INFO [http-apr-8079-exec-173] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 17:32:20.288 INFO [http-apr-8079-exec-169] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 17:32:20.352 INFO [http-apr-8079-exec-169] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 17:32:56.298 INFO [http-nio-8443-exec-206] com.ChatEndpoint.open entra
+31-Mar-2016 17:32:58.231 INFO [http-nio-8443-exec-202] com.ChatEndpoint.open entra
+31-Mar-2016 17:36:33.150 INFO [http-nio-8443-exec-208] com.ChatEndpoint.close se fue asd
+31-Mar-2016 17:36:33.461 INFO [http-nio-8443-exec-208] com.ChatEndpoint.close se fue dsa
+31-Mar-2016 17:36:35.848 INFO [http-nio-8443-exec-213] com.ChatEndpoint.open entra
+31-Mar-2016 17:36:37.254 INFO [http-nio-8443-exec-214] com.ChatEndpoint.open entra
+31-Mar-2016 21:18:02.743 INFO [http-nio-8443-exec-211] com.ChatEndpoint.close se fue asd
+31-Mar-2016 21:18:05.602 INFO [http-nio-8443-exec-209] com.ChatEndpoint.open entra
+31-Mar-2016 21:18:08.474 INFO [http-nio-8443-exec-212] com.ChatEndpoint.close se fue dsa
+31-Mar-2016 21:18:10.624 INFO [http-nio-8443-exec-213] com.ChatEndpoint.open entra
+31-Mar-2016 21:23:03.053 INFO [http-nio-8443-exec-208] com.ChatEndpoint.close se fue asd
+31-Mar-2016 21:23:05.170 INFO [http-nio-8443-exec-214] com.ChatEndpoint.open entra
+31-Mar-2016 21:23:30.791 INFO [http-nio-8443-exec-208] com.ChatEndpoint.close se fue asd
+31-Mar-2016 21:23:33.289 INFO [http-nio-8443-exec-214] com.ChatEndpoint.open entra
+31-Mar-2016 21:24:37.159 INFO [http-nio-8443-exec-207] com.ChatEndpoint.close se fue asd
+31-Mar-2016 21:24:40.172 INFO [http-nio-8443-exec-213] com.ChatEndpoint.open entra
+31-Mar-2016 21:24:57.815 INFO [http-nio-8443-exec-206] com.ChatEndpoint.close se fue dsa
+31-Mar-2016 21:25:01.843 INFO [http-nio-8443-exec-209] com.ChatEndpoint.open entra
+31-Mar-2016 21:25:24.546 INFO [http-nio-8443-exec-211] com.ChatEndpoint.close se fue asd
+31-Mar-2016 21:25:24.817 INFO [http-nio-8443-exec-213] com.ChatEndpoint.close se fue dsa
+31-Mar-2016 21:25:27.574 INFO [http-nio-8443-exec-209] com.ChatEndpoint.open entra
+31-Mar-2016 21:25:29.822 INFO [http-nio-8443-exec-210] com.ChatEndpoint.open entra
+31-Mar-2016 21:25:33.145 INFO [http-nio-8443-exec-208] com.ChatEndpoint.close se fue dsa
+31-Mar-2016 21:29:51.035 INFO [http-nio-8443-exec-209] com.ChatEndpoint.close se fue asd
+31-Mar-2016 21:29:53.920 INFO [http-nio-8443-exec-213] com.ChatEndpoint.open entra
+31-Mar-2016 21:29:56.780 INFO [http-nio-8443-exec-207] com.ChatEndpoint.open entra
+31-Mar-2016 21:30:24.878 INFO [http-nio-8443-exec-210] com.ChatEndpoint.close se fue dsa
+31-Mar-2016 21:30:26.731 INFO [http-nio-8443-exec-211] com.ChatEndpoint.open entra
+31-Mar-2016 21:31:44.012 INFO [http-nio-8443-exec-209] com.ChatEndpoint.close se fue dsa
+31-Mar-2016 21:31:44.329 INFO [http-nio-8443-exec-215] com.ChatEndpoint.close se fue asd
+31-Mar-2016 21:31:47.974 INFO [http-nio-8443-exec-214] com.ChatEndpoint.open entra
+31-Mar-2016 21:31:50.093 INFO [http-nio-8443-exec-207] com.ChatEndpoint.open entra
+31-Mar-2016 21:33:18.896 INFO [http-nio-8443-exec-214] com.ChatEndpoint.close se fue asd
+31-Mar-2016 21:33:19.581 INFO [http-nio-8443-exec-209] com.ChatEndpoint.close se fue dsa
+31-Mar-2016 21:33:21.536 INFO [http-nio-8443-exec-207] com.ChatEndpoint.open entra
+31-Mar-2016 21:33:22.973 INFO [http-nio-8443-exec-214] com.ChatEndpoint.open entra
+31-Mar-2016 21:34:54.007 INFO [http-nio-8443-exec-207] com.ChatEndpoint.close se fue asd
+31-Mar-2016 21:34:54.601 INFO [http-nio-8443-exec-210] com.ChatEndpoint.close se fue dsa
+31-Mar-2016 21:34:56.258 INFO [http-nio-8443-exec-208] com.ChatEndpoint.open entra
+31-Mar-2016 21:34:57.828 INFO [http-nio-8443-exec-212] com.ChatEndpoint.open entra
+31-Mar-2016 21:36:22.149 INFO [http-nio-8443-exec-209] com.ChatEndpoint.close se fue asd
+31-Mar-2016 21:36:22.502 INFO [http-nio-8443-exec-207] com.ChatEndpoint.close se fue dsa
+31-Mar-2016 21:36:24.727 INFO [http-nio-8443-exec-211] com.ChatEndpoint.open entra
+31-Mar-2016 21:36:26.133 INFO [http-nio-8443-exec-206] com.ChatEndpoint.open entra
+31-Mar-2016 21:45:28.551 INFO [http-nio-8443-exec-214] com.ChatEndpoint.close se fue asd
+31-Mar-2016 21:45:32.780 INFO [http-nio-8443-exec-210] com.ChatEndpoint.close se fue dsa
+31-Mar-2016 21:45:35.501 INFO [http-nio-8443-exec-207] com.ChatEndpoint.open entra
+31-Mar-2016 21:45:37.312 INFO [http-nio-8443-exec-210] com.ChatEndpoint.open entra
+31-Mar-2016 21:45:51.284 INFO [http-nio-8443-exec-212] com.ChatEndpoint.close se fue asd
+31-Mar-2016 21:45:55.106 INFO [http-nio-8443-exec-215] com.ChatEndpoint.close se fue dsa
+31-Mar-2016 21:45:57.026 INFO [http-nio-8443-exec-209] com.ChatEndpoint.open entra
+31-Mar-2016 21:45:59.815 INFO [http-nio-8443-exec-215] com.ChatEndpoint.open entra
+31-Mar-2016 21:47:05.234 INFO [http-nio-8443-exec-207] com.ChatEndpoint.close se fue dsa
+31-Mar-2016 21:54:00.996 INFO [http-apr-8079-exec-192] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 21:54:00.998 INFO [http-apr-8079-exec-192] com.ChatEndpoint.close se fue asd
+31-Mar-2016 21:54:01.051 INFO [http-apr-8079-exec-192] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 22:02:43.711 INFO [http-apr-8079-exec-190] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 22:02:43.765 INFO [http-apr-8079-exec-190] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 22:02:56.030 INFO [http-nio-8443-exec-211] com.ChatEndpoint.open entra
+31-Mar-2016 22:02:58.894 INFO [http-nio-8443-exec-221] com.ChatEndpoint.open entra
+31-Mar-2016 22:04:53.874 INFO [http-apr-8079-exec-199] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 22:04:53.876 INFO [http-apr-8079-exec-199] com.ChatEndpoint.close se fue asd
+31-Mar-2016 22:04:53.877 INFO [http-apr-8079-exec-199] com.ChatEndpoint.close se fue dsa
+31-Mar-2016 22:04:53.937 INFO [http-apr-8079-exec-199] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 22:05:49.963 INFO [http-nio-8443-exec-227] com.ChatEndpoint.open entra
+31-Mar-2016 22:05:51.770 INFO [http-nio-8443-exec-228] com.ChatEndpoint.open entra
+31-Mar-2016 22:05:57.493 INFO [http-nio-8443-exec-233] com.ChatEndpoint.open entra
+31-Mar-2016 22:06:00.555 INFO [http-nio-8443-exec-210] com.ChatEndpoint.close se fue dsa
+31-Mar-2016 22:06:05.179 INFO [http-nio-8443-exec-230] com.ChatEndpoint.close se fue qwe
+31-Mar-2016 22:07:17.280 INFO [http-apr-8079-exec-203] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 22:07:17.283 INFO [http-apr-8079-exec-203] com.ChatEndpoint.close se fue asd
+31-Mar-2016 22:07:17.342 INFO [http-apr-8079-exec-203] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 22:08:48.138 INFO [http-apr-8079-exec-199] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 22:08:48.181 INFO [http-apr-8079-exec-199] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 22:09:17.481 INFO [http-apr-8079-exec-203] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 22:09:17.531 INFO [http-apr-8079-exec-203] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 22:11:06.950 INFO [http-apr-8079-exec-208] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 22:11:07.009 INFO [http-apr-8079-exec-208] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 22:11:15.142 INFO [http-nio-8443-exec-239] com.ChatEndpoint.open entra
+31-Mar-2016 22:12:10.284 INFO [http-apr-8079-exec-199] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 22:12:10.288 INFO [http-apr-8079-exec-199] com.ChatEndpoint.close se fue asd
+31-Mar-2016 22:12:10.347 INFO [http-apr-8079-exec-199] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 22:12:29.791 INFO [http-apr-8079-exec-203] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 22:12:29.835 INFO [http-apr-8079-exec-203] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 22:13:53.390 INFO [http-apr-8079-exec-199] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 22:13:53.450 INFO [http-apr-8079-exec-199] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 22:14:10.451 INFO [http-apr-8079-exec-203] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 22:14:10.490 INFO [http-apr-8079-exec-203] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 22:14:52.330 INFO [http-apr-8079-exec-199] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 22:14:52.393 INFO [http-apr-8079-exec-199] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 22:14:58.205 INFO [http-apr-8079-exec-219] org.apache.catalina.core.StandardContext.reload Ha comenzado la recarga de Contexto [/Chat]
+31-Mar-2016 22:14:58.235 INFO [http-apr-8079-exec-219] org.apache.catalina.core.StandardContext.reload Se ha completado la recarga de este Contexto
+31-Mar-2016 22:15:57.499 INFO [main] org.apache.catalina.core.StandardServer.await Se ha recibido un comando de apagado a través del puerto de apagado. Parando la instancia del Servidor.
+31-Mar-2016 22:15:57.500 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-apr-8079"]
+31-Mar-2016 22:15:57.552 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8443"]
+31-Mar-2016 22:15:57.603 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-apr-8009"]
+31-Mar-2016 22:15:57.653 INFO [main] org.apache.catalina.core.StandardService.stopInternal Parando servicio Catalina
+31-Mar-2016 22:15:57.670 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-apr-8079"]
+31-Mar-2016 22:15:57.721 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8443"]
+31-Mar-2016 22:15:57.722 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-apr-8009"]
+31-Mar-2016 22:15:57.773 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-apr-8079"]
+31-Mar-2016 22:15:57.774 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8443"]
+31-Mar-2016 22:15:57.775 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-apr-8009"]
